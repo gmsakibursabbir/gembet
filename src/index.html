@@ -3414,7 +3414,7 @@
       </div>
     </div>
     <!-- mobile bar start  -->
-    <div class="md:hidden fixed bottom-0 left-0 w-full z-10 shadow-xl">
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-9999 shadow-xl">
       <ul
         class="flex flex-row justify-between py-3 px-4 bg-surface-secondary shadow"
       >
@@ -3581,20 +3581,29 @@
     <!-- Modal 1 -->
     <div
       id="modal-1"
-      class="modal fixed inset-0 z-50 flex items-center justify-center hidden"
+      class="modal fixed inset-0 z-99999 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
     >
+      <!-- Blur Overlay -->
       <div
-        class="modal-overlay absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
+        class="absolute inset-0 bg-black/40 backdrop-blur-md backdrop-saturate-150 z-10"
       ></div>
+
+      <!-- Modal Content -->
       <div
-        class="modal-content relative bg-gray-900 rounded-xl shadow-lg max-w-[400px] min-h-[100px] w-full mx-4 px-2 pt-8 pb-6 scale-95 opacity-0 transition-all duration-300"
+        id="modal-content"
+        class="relative z-20 rounded-xl max-w-[400px] min-h-[100px] w-full mx-4 px-6 pt-6 pb-6 scale-95 opacity-0 transition-all duration-300"
       >
+        <!-- Close Button -->
         <button
-          class="close-modal absolute top-0 right-2 text-gray-500 hover:text-gray-800 text-3xl cursor-pointer"
+          id="close-modal"
+          class="absolute top-2 right-4 text-[#e6f0ff] hover:text-[#008235] text-3xl cursor-pointer leading-none"
+          aria-label="Close"
         >
           &times;
         </button>
-        <form class="relative max-w-full w-[250px] sm:w-[300px] mx-auto">
+
+        <!-- Search Form -->
+        <form class="relative w-full max-w-[400px] mx-auto mt-6">
           <input
             type="text"
             placeholder="Search..."
@@ -3603,8 +3612,7 @@
           <div
             class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-900"
           >
-            <!-- Search Icon -->
-            <button class="p-2 cursor-pointer h-[56px]">
+            <button class="p-2 cursor-pointer h-[56px]" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-5 h-5"

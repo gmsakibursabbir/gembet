@@ -242,46 +242,58 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // modal
+const modal = document.getElementById("modal-1");
+const modalContent = document.getElementById("modal-content");
+const openBtns = document.querySelectorAll(".open-modal");
+const closeBtn = document.getElementById("close-modal");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const openButtons = document.querySelectorAll(".open-modal");
-  const modals = document.querySelectorAll(".modal");
+// Open Modal
+openBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  openButtons.forEach((button) => {
-    const targetId = button.dataset.modalTarget;
-    const modal = document.getElementById(targetId);
-    const overlay = modal.querySelector(".modal-overlay");
-    const content = modal.querySelector(".modal-content");
-    const closeBtn = modal.querySelector(".close-modal");
+    // Show modal
+    modal.classList.remove("opacity-0", "pointer-events-none");
+    modal.classList.add("opacity-100", "pointer-events-auto");
 
-    // Open Modal
-    button.addEventListener("click", () => {
-      modal.classList.remove("hidden");
-      setTimeout(() => {
-        overlay.classList.add("opacity-100");
-        content.classList.add("opacity-100", "scale-100");
-        content.classList.remove("scale-95");
-      }, 10);
-    });
+    // Animate modal content
+    modalContent.classList.remove("opacity-0", "scale-95");
+    modalContent.classList.add("opacity-100", "scale-100");
 
-    // Close Modal
-    const closeModal = () => {
-      overlay.classList.remove("opacity-100");
-      content.classList.remove("opacity-100", "scale-100");
-      content.classList.add("scale-95");
-      setTimeout(() => {
-        modal.classList.add("hidden");
-      }, 300);
-    };
-
-    overlay.addEventListener("click", closeModal);
-    closeBtn.addEventListener("click", closeModal);
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-        closeModal();
-      }
-    });
+    // Lock body scroll
+    document.body.classList.add("overflow-hidden");
   });
+});
+
+// Close Modal
+const closeModal = () => {
+  // Hide modal
+  modal.classList.add("opacity-0", "pointer-events-none");
+  modal.classList.remove("opacity-100", "pointer-events-auto");
+
+  // Animate out modal content
+  modalContent.classList.remove("opacity-100", "scale-100");
+  modalContent.classList.add("opacity-0", "scale-95");
+
+  // Restore body scroll
+  document.body.classList.remove("overflow-hidden");
+};
+
+// Close when clicking close button
+closeBtn.addEventListener("click", closeModal);
+
+// Close when clicking outside modal content
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// Close with ESC key
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
 });
 
 // scroll top
