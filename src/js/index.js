@@ -303,18 +303,23 @@ window.addEventListener("DOMContentLoaded", () => {
   const alertBox = document.getElementById("info-alart");
   const closeBtn = document.getElementById("close-alart");
 
-  // Show alert with animation
+  // Show after slight delay (e.g. 1s)
   setTimeout(() => {
-    alertBox.classList.remove("opacity-0", "translate-y-[-100%]");
-    alertBox.classList.add("opacity-100", "translate-y-0");
-  }, 100); // small delay to trigger transition
+    alertBox.classList.remove("hidden");
 
-  // Auto close after 10 seconds
+    // Force reflow to restart transition
+    void alertBox.offsetWidth;
+
+    alertBox.classList.remove("opacity-0", "-translate-y-2");
+    alertBox.classList.add("opacity-100", "translate-y-0");
+  }, 1000); // show after 1 second
+
+  // Auto close after 10s
   const autoClose = setTimeout(() => {
     closeAlert();
-  }, 10000);
+  }, 11000); // 1s delay + 10s = 11s
 
-  // Manual close
+  // Close on click
   closeBtn.addEventListener("click", () => {
     clearTimeout(autoClose);
     closeAlert();
@@ -322,9 +327,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function closeAlert() {
     alertBox.classList.remove("opacity-100", "translate-y-0");
-    alertBox.classList.add("opacity-0", "-translate-y-10");
+    alertBox.classList.add("opacity-0", "-translate-y-2");
 
-    // Optional: completely remove from DOM after animation
     setTimeout(() => {
       alertBox.classList.add("hidden");
     }, 500); // match with duration-500
