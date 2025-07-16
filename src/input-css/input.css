@@ -99,7 +99,7 @@ body {
   background-image: url(../images/hot.png);
 } */
 .logoWrapp li {
-  background-color: #17274B;
+  background-color: #17274b;
   border-radius: 10px;
   padding: 8px 12px;
   height: 100%;
@@ -108,7 +108,7 @@ body {
   align-items: center;
 }
 .logoWrapp-container {
-  background-color: #17274B;
+  background-color: #17274b;
   border-radius: 8px;
   padding: 8px 12px;
   height: 100%;
@@ -120,9 +120,9 @@ body {
 .logoTrust-container {
   background-color: #17274b;
   border-radius: 8px !important;
-  padding: 0px 12px;
+  padding: 8px 12px;
   height: 100%;
-  min-height: 30px;
+  min-height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,4 +241,28 @@ body {
 
 .swiper-pagination-bullet-active-csttwo {
   @apply bg-[#E5EAFA]; /* pill shape & color */
+}
+@keyframes bounceSmooth {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+}
+
+.bounce-smooth {
+  animation: bounceSmooth 0.6s ease-in-out infinite;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-name: bounceSmooth;
+  animation-duration: 2.6s; /* 0.6s animation + 2s rest = 2.6s loop */
 }

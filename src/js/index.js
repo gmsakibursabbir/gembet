@@ -106,35 +106,7 @@ var claimwsswiper = new Swiper(".claimSwiper", {
     },
   },
 });
-// swiper trustSwiper
-var trustwsswiper = new Swiper(".trustSwiper", {
-  loop: true,
-  spaceBetween: 4,
-  autoplay: {
-    delay: 3000, // time between slides (ms)
-    disableOnInteraction: false, // continue autoplay after user swipe
-  },
-  pagination: {
-    el: ".custom-pagination",
-    clickable: true,
-    bulletClass: "swiper-pagination-bullet",
-    bulletActiveClass: "swiper-pagination-bullet-active",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 3.2,
-      centeredSlides: true,
-    },
-    640: {
-      slidesPerView: 3.2,
-      centeredSlides: true,
-    },
-    1024: {
-      slidesPerView: 2.2,
-      centeredSlides: false,
-    },
-  },
-});
+
 // swiper hdSwiper
 var hdwsswiper = new Swiper(".hdSwiper", {
   loop: true,
@@ -183,7 +155,36 @@ var whowsswiper = new Swiper(".whoSwiper", {
       centeredSlides: true,
     },
     640: {
+      slidesPerView: 5.2,
+      centeredSlides: true,
+    },
+    1024: {
+      slidesPerView: 2.2,
+      centeredSlides: false,
+    },
+  },
+});
+// swiper trustSwiper
+var trustswiper = new Swiper(".trustSwiper", {
+  loop: true,
+  autoplay: {
+    delay: 3000, // time between slides (ms)
+    disableOnInteraction: false, // continue autoplay after user swipe
+  },
+  spaceBetween: 4,
+  pagination: {
+    el: ".custom-pagination-trust",
+    clickable: true,
+    bulletClass: "swiper-pagination-bullet-csttwo",
+    bulletActiveClass: "swiper-pagination-bullet-active-csttwo",
+  },
+  breakpoints: {
+    0: {
       slidesPerView: 3.2,
+      centeredSlides: true,
+    },
+    640: {
+      slidesPerView: 5.2,
       centeredSlides: true,
     },
     1024: {
