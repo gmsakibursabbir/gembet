@@ -1,0 +1,3619 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gembet</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <!-- <div id="preloader" class="fixed inset-0 bg-surface-primary z-50 flex items-center justify-center">
+    <img src="./images/Logo.svg" alt="logo">
+    <div
+      class="w-16 h-16 border-4 border-gray-300 rounded-full spinner border-t-blue-500 absolute left-0 right-0 m-auto">
+    </div>
+  </div> -->
+
+    <!-- Header -->
+    <header
+      class="bg-gray-900 px-4 xl:px-10 py-3 xl:py-4 sticky top-0 z-30 lg:shadow-none shadow-xl"
+    >
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex flex-row gap-8 items-center">
+          <a href="index.html"
+            ><img
+              src="./images/Logo.svg"
+              alt="gembet"
+              class="xl:w-auto w-[116px]"
+          /></a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex space-x-4 items-center">
+            <ul class="flex flex-row gap-6 items-center">
+              <li class="relative dropdown group transition-all">
+                <button
+                  class="dropdown-toggle flex justify-center items-center text-indigo-100 text-base font-medium hover:text-text-action transition-all font-Inter leading-tight cursor-pointer hoverEffect"
+                  data-dropdown
+                >
+                  Sports
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.51431 7.82698C5.18944 8.15184 5.18944 8.68495 5.51431 9.00982L9.67924 13.1747C10.0041 13.4996 10.5289 13.4996 10.8538 13.1747L15.027 9.00982C15.3519 8.68495 15.3519 8.16017 15.027 7.83531C14.7021 7.51044 14.1774 7.51044 13.8525 7.83531L10.279 11.4088L6.69715 7.82698C6.37228 7.50211 5.83917 7.50211 5.51431 7.82698Z"
+                      fill="#E5EAFA"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-content shadow-lg group-hover:!block transition-all"
+                >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                    >Football</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                    >Basketball</a
+                  >
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect"
+                  >Slots</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect"
+                  >Live Casino</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect"
+                  >Promotions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect"
+                  >VIP Club</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- CTAs -->
+        <div class="flex items-center space-x-4">
+          <ul class="flex flex-row flex-wrap gap-2 items-center">
+            <li class="relative dropdown md:block hidden">
+              <button
+                data-modal-target="modal-1"
+                class="open-modal w-9 h-9 flex justify-center items-center bg-surface-input hover:bg-surface-input-highlight transition-all cursor-pointer rounded-full"
+              >
+                <!-- Search Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                >
+                  <path
+                    d="M8.54167 2.5C5.21481 2.5 2.5 5.21482 2.5 8.54167C2.5 11.8685 5.21481 14.5833 8.54167 14.5833C9.90548 14.5833 11.162 14.1221 12.1753 13.3545L16.0775 17.2559C16.1543 17.3358 16.2462 17.3997 16.348 17.4437C16.4498 17.4877 16.5593 17.5109 16.6702 17.512C16.781 17.5132 16.891 17.4922 16.9937 17.4502C17.0963 17.4083 17.1896 17.3464 17.268 17.268C17.3464 17.1896 17.4083 17.0963 17.4502 16.9937C17.4922 16.891 17.5132 16.781 17.512 16.6702C17.5109 16.5593 17.4877 16.4498 17.4437 16.348C17.3997 16.2462 17.3358 16.1543 17.2559 16.0775L13.3545 12.1753C14.1221 11.162 14.5833 9.90548 14.5833 8.54167C14.5833 5.21482 11.8685 2.5 8.54167 2.5ZM8.54167 4.16667C10.9678 4.16667 12.9167 6.11555 12.9167 8.54167C12.9167 9.70655 12.4642 10.7586 11.7285 11.5405C11.6569 11.5924 11.594 11.6553 11.5422 11.7269C10.76 12.4635 9.70738 12.9167 8.54167 12.9167C6.11555 12.9167 4.16667 10.9678 4.16667 8.54167C4.16667 6.11555 6.11555 4.16667 8.54167 4.16667Z"
+                    fill="#E5EAFA"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a
+                href=""
+                class="px-1 py-2 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-action text-sm font-bold font-Inter leading-none hover:text-white transition-all"
+                >Log In
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="h-9 max-w-96 min-w-24 px-4 py-2 bg-surface-action-primary hover:bg-green-800 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-on-action text-sm font-bold font-Inter leading-none"
+                >Join Now
+              </a>
+            </li>
+            <li class="relative dropdown group transition-all">
+              <button
+                class="dropdown-toggle flex items-center space-x-2"
+                data-dropdown
+              >
+                <img src="./images/toggle.svg" alt="toggle" />
+              </button>
+              <div
+                class="dropdown-menu dropdown-content shadow-lg right-0 group-hover:!block transition-all"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                  >Spanish</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero section start  -->
+      <section class="hero bg-cover bg-no-repeat lg:p-0 pt-12 pb-6">
+        <div
+          class="container grid lg:grid-cols-2 grid-cols-1 items-center gap-4 lg:mb-0 mb-6"
+        >
+          <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-3 justify-start">
+              <h1
+                class="lg:max-w-[540px] w-full text-blue-50 text-2xl lg:text-4xl font-bold font-Inter leading-[32px] lg:leading-10"
+              >
+                Play & win at the most trusted casino in Singapore
+              </h1>
+              <p
+                class="text-text-headings text-sm lg:text-base font-normal font-Inter leading-tight"
+              >
+                Unlock thrilling adventures and massive wins with GemBet.
+              </p>
+
+              <div class="flex items-center gap-3 lg:gap-5">
+                <div
+                  class="pr-3 border-r border-dark-tertiary flex flex-col items-start h-full"
+                >
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="./images/User.svg"
+                      alt="Active Players"
+                      class="w-5 lg:w-auto"
+                    />
+                    <h4
+                      class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                    >
+                      10K+
+                    </h4>
+                  </div>
+                  <p
+                    class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                  >
+                    Active Players
+                  </p>
+                </div>
+
+                <div
+                  class="pr-3 border-r border-dark-tertiary flex flex-col items-start h-full"
+                >
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="./images/Withdraw-2.svg"
+                      alt="Withdraw"
+                      class="w-5 lg:w-auto"
+                    />
+                    <h4
+                      class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                    >
+                      &lt;1hr
+                    </h4>
+                  </div>
+                  <p
+                    class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                  >
+                    Withdrawals
+                  </p>
+                </div>
+                <div class="flex flex-col items-start h-full">
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="./images/Headset.svg"
+                      alt="Headset"
+                      class="w-5 lg:w-auto"
+                    />
+                    <h4
+                      class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                    >
+                      24/7
+                    </h4>
+                  </div>
+                  <p
+                    class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                  >
+                    Customer Support
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-start">
+              <a
+                href=""
+                class="px-6 lg:px-[35px] py-3.5 lg:py-4 bg-green-700 hover:bg-green-800 rounded-full inline-flex items-center text-center justify-center text-text-on-action text-base lg:text-xl font-bold font-Inter leading-normal"
+              >
+                Join Now
+              </a>
+            </div>
+          </div>
+          <div class="lg:block hidden">
+            <img
+              src="./images/banner-card.png"
+              alt="banner-card"
+              class="ml-auto"
+            />
+          </div>
+        </div>
+        <div class="lg:hidden block">
+          <!-- <img src="./images/Cards.png" alt="Cards image" class="w-full" /> -->
+
+          <div class="swiper hdSwiper relative w-full h-full">
+            <div class="swiper-wrapper py-2">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="bg-[#0E192D] p-2 rounded-lg">
+                  <div>
+                    <img
+                      src="./images/header-pt-01.png"
+                      alt="image"
+                      class="w-full rounded-md"
+                    />
+                  </div>
+                  <div class="flex flex-row items-center justify-between mt-2">
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/cassino-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5 class="text-[#E5EAFA] text-xs font-Inter font-bold">
+                        Casino
+                      </h5>
+                    </div>
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/user-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5
+                        class="text-[#E5EAFA] text-xs font-Inter font-regular"
+                      >
+                        4,125
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="bg-[#0E192D] p-2 rounded-lg">
+                  <div>
+                    <img
+                      src="./images/header-pt-02.png"
+                      alt="image"
+                      class="w-full rounded-md"
+                    />
+                  </div>
+                  <div class="flex flex-row items-center justify-between mt-2">
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/sports-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5 class="text-[#E5EAFA] text-xs font-Inter font-bold">
+                        Sports
+                      </h5>
+                    </div>
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/user-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5
+                        class="text-[#E5EAFA] text-xs font-Inter font-regular"
+                      >
+                        15,930
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="bg-[#0E192D] p-2 rounded-lg">
+                  <div>
+                    <img
+                      src="./images/header-pt-03.png"
+                      alt="image"
+                      class="w-full rounded-md"
+                    />
+                  </div>
+                  <div class="flex flex-row items-center justify-between mt-2">
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/slots-icons.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5 class="text-[#E5EAFA] text-xs font-Inter font-bold">
+                        Slots
+                      </h5>
+                    </div>
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/user-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5
+                        class="text-[#E5EAFA] text-xs font-Inter font-regular"
+                      >
+                        4,125
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="bg-[#0E192D] p-2 rounded-lg">
+                  <div>
+                    <img
+                      src="./images/header-pt-01.png"
+                      alt="image"
+                      class="w-full rounded-md"
+                    />
+                  </div>
+                  <div class="flex flex-row items-center justify-between mt-2">
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/cassino-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5 class="text-[#E5EAFA] text-xs font-Inter font-bold">
+                        Casino
+                      </h5>
+                    </div>
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/user-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5
+                        class="text-[#E5EAFA] text-xs font-Inter font-regular"
+                      >
+                        4,125
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="bg-[#0E192D] p-2 rounded-lg">
+                  <div>
+                    <img
+                      src="./images/header-pt-02.png"
+                      alt="image"
+                      class="w-full rounded-md"
+                    />
+                  </div>
+                  <div class="flex flex-row items-center justify-between mt-2">
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/sports-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5 class="text-[#E5EAFA] text-xs font-Inter font-bold">
+                        Sports
+                      </h5>
+                    </div>
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/user-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5
+                        class="text-[#E5EAFA] text-xs font-Inter font-regular"
+                      >
+                        15,930
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="bg-[#0E192D] p-2 rounded-lg">
+                  <div>
+                    <img
+                      src="./images/header-pt-03.png"
+                      alt="image"
+                      class="w-full rounded-md"
+                    />
+                  </div>
+                  <div class="flex flex-row items-center justify-between mt-2">
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/slots-icons.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5 class="text-[#E5EAFA] text-xs font-Inter font-bold">
+                        Slots
+                      </h5>
+                    </div>
+                    <div class="flex flex-row items-center gap-[2px]">
+                      <img
+                        src="./images/user-icon.svg"
+                        alt="casino"
+                        class="w-3 h-3"
+                      />
+                      <h5
+                        class="text-[#E5EAFA] text-xs font-Inter font-regular"
+                      >
+                        4,125
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section end  -->
+
+      <!-- Start winning in 4 steps start  -->
+      <section
+        class="py-6 sm:py-12 bg-surface-secondary justify-start items-center"
+      >
+        <div class="container">
+          <h2
+            class="text-center justify-start text-text-headings text-2xl font-bold font-['Inter'] leading-loose"
+          >
+            Start winning in 4 steps
+          </h2>
+          <div
+            class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-[936px] max-w-full mx-auto relative after:absolute after:top-[18px] after:sm:left-0 after:sm:right-0 after:left-4 after:sm:h-[2px] after:bg-dark-tertiary after:sm:w-[78%] after:w-[2px] after:h-[78%] after:sm:m-auto after:z-10 lg:after:opacity-100 sm:after:opacity-0"
+          >
+            <!-- single item start  -->
+            <div class="flex sm:flex-col sm:gap-6 gap-5 relative z-20">
+              <div class="sm:text-center flex sm:justify-center">
+                <div
+                  class="w-8 h-8 p-2.5 bg-surface-input-highlight rounded-[100px] flex justify-center flex-col items-center gap-2.5"
+                >
+                  <span
+                    class="justify-start text-white text-base font-medium font-['Inter'] leading-tight"
+                    >1</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 sm:text-center">
+                <h4
+                  class="text-text-body-primary text-base lg:text-xl font-bold font-['Inter'] leading-normal"
+                >
+                  Invite friends
+                </h4>
+                <p
+                  class="text-text-body-primary text-sm font-normal font-['Inter'] leading-normal"
+                >
+                  Sign in using the JOIN NOW button on the top menu
+                </p>
+              </div>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex sm:flex-col sm:gap-6 gap-5 relative z-20">
+              <div class="text-center flex justify-center">
+                <div
+                  class="w-8 h-8 p-2.5 bg-surface-input-highlight rounded-[100px] flex justify-center flex-col items-center gap-2.5"
+                >
+                  <span
+                    class="justify-start text-white text-base font-medium font-['Inter'] leading-tight"
+                    >2</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 sm:text-center">
+                <h4
+                  class="text-text-body-primary text-base lg:text-xl font-bold font-['Inter'] leading-normal"
+                >
+                  Earn rewards
+                </h4>
+                <p
+                  class="text-text-body-primary text-sm font-normal font-['Inter'] leading-normal"
+                >
+                  Once you are in the lobby click on the DEPOSIT button
+                </p>
+              </div>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex sm:flex-col sm:gap-6 gap-5 relative z-20">
+              <div class="text-center flex justify-center">
+                <div
+                  class="w-8 h-8 p-2.5 bg-surface-input-highlight rounded-[100px] flex justify-center flex-col items-center gap-2.5"
+                >
+                  <span
+                    class="justify-start text-white text-base font-medium font-['Inter'] leading-tight"
+                    >3</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 sm:text-center">
+                <h4
+                  class="text-text-body-primary text-base lg:text-xl font-bold font-['Inter'] leading-normal"
+                >
+                  Continue inviting
+                </h4>
+                <p
+                  class="text-text-body-primary text-sm font-normal font-['Inter'] leading-normal"
+                >
+                  Select your favorite game or sport event
+                </p>
+              </div>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex sm:flex-col sm:gap-6 gap-5 relative z-20">
+              <div class="text-center flex justify-center">
+                <div
+                  class="w-8 h-8 p-2.5 bg-surface-input-highlight rounded-[100px] flex justify-center flex-col items-center gap-2.5"
+                >
+                  <span
+                    class="justify-start text-white text-base font-medium font-['Inter'] leading-tight"
+                    >4</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 sm:text-center">
+                <h4
+                  class="text-text-body-primary text-base lg:text-xl font-bold font-['Inter'] leading-normal"
+                >
+                  Play & win
+                </h4>
+                <p
+                  class="text-text-body-primary text-sm font-normal font-['Inter'] leading-normal"
+                >
+                  ...and don’t forget to claim your welcome bonus!
+                </p>
+              </div>
+            </div>
+            <!-- single item end  -->
+          </div>
+        </div>
+      </section>
+      <!-- Start winning in 4 steps end -->
+      <!-- hot start  -->
+      <section class="hot bg-surface-primary bg-no-repeat py-8 lg:py-12">
+        <div class="container">
+          <div
+            class="flex flex-col justify-between flex-wrap gap-6 items-center mb-[62px]"
+          >
+            <h2
+              class="text-center text-text-headings text-xl lg:text-2xl font-bold font-Inter leading-normal lg:leading-loose"
+            >
+              Hot Today 🔥
+            </h2>
+            <!-- Tabs -->
+            <div class="p-2 bg-surface-secondary rounded-full overflow-x-auto">
+              <ul class="flex flex-row lg:w-auto min-w-[400px]">
+                <li>
+                  <button
+                    class="tab-btn active-tab px-4 py-2 bg-surface-secondary rounded-full inline-flex justify-center items-center text-text-inactive text-sm font-bold font-Inter leading-none cursor-pointer"
+                    data-tab="sports"
+                  >
+                    Sports Events
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="tab-btn px-4 py-2 bg-surface-secondary rounded-full inline-flex justify-center items-center text-text-inactive text-sm font-bold font-Inter leading-none cursor-pointer"
+                    data-tab="slot"
+                  >
+                    Slot Games
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="tab-btn px-4 py-2 bg-surface-secondary rounded-full inline-flex justify-center items-center text-text-inactive text-sm font-bold font-Inter leading-none cursor-pointer"
+                    data-tab="casino"
+                  >
+                    Live Casino Tables
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tab Content -->
+          <div id="tab-content">
+            <div data-tab-content="sports" class="tab-pane">
+              <div class="overflow-x-auto overflow-y-hidden">
+                <div
+                  class="grid grid-cols-4 gap-7 lg:min-w-auto min-w-[1200px]"
+                >
+                  <!-- single item start  -->
+                  <div>
+                    <div
+                      class="px-3 py-2 rounded-tl-lg rounded-tr-lg inline-flex justify-start items-center gap-2 cardBg bg-cover bg-no-repeat bg-top w-full"
+                    >
+                      <a
+                        href=""
+                        class="flex flex-row gap-2 items-center w-full"
+                      >
+                        <span>
+                          <img src="./images/UEFA.svg" alt="UEFA" />
+                        </span>
+                        <span class="flex flex-col gap-1">
+                          <span
+                            class="self-stretch inline-flex justify-start items-start gap-0.5"
+                          >
+                            <span
+                              class="justify-start text-text-body-primary text-xs font-bold font-Inter leading-none tracking-tight"
+                            >
+                              UEFA Champions League</span
+                            >
+                            <span>
+                              <img src="./images/Right.svg" alt="Right" />
+                            </span>
+                          </span>
+                          <span
+                            class="self-stretch flex flex-row justify-start items-center gap-1"
+                          >
+                            <span>
+                              <img src="./images/Time.svg" alt="time" />
+                            </span>
+                            <span class="flex flex-row flex-wrap gap-1">
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-bold font-Inter leading-none"
+                              >
+                                2nd Half</span
+                              >
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-normal font-Inter leading-none"
+                              >
+                                Extra Time 118"</span
+                              >
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    <div
+                      class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3"
+                    >
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Real-mDRID.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Real Madrid
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          7.30
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img src="./images/X.png" alt="x" class="mx-auto" />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Draw
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          2.80
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Manchest.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Manchest..
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          1.03
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                    </div>
+                  </div>
+                  <!-- single item end  -->
+
+                  <!-- single item start  -->
+                  <div>
+                    <div
+                      class="px-3 py-2 rounded-tl-lg rounded-tr-lg inline-flex justify-start items-center gap-2 cardBg bg-cover bg-no-repeat bg-top w-full"
+                    >
+                      <a
+                        href=""
+                        class="flex flex-row gap-2 items-center w-full"
+                      >
+                        <span>
+                          <img src="./images/UEFA.svg" alt="UEFA" />
+                        </span>
+                        <span class="flex flex-col gap-1">
+                          <span
+                            class="self-stretch inline-flex justify-start items-start gap-0.5"
+                          >
+                            <span
+                              class="justify-start text-text-body-primary text-xs font-bold font-Inter leading-none tracking-tight"
+                            >
+                              UEFA Champions League</span
+                            >
+                            <span>
+                              <img src="./images/Right.svg" alt="Right" />
+                            </span>
+                          </span>
+                          <span
+                            class="self-stretch flex flex-row justify-start items-center gap-1"
+                          >
+                            <span>
+                              <img src="./images/Time.svg" alt="time" />
+                            </span>
+                            <span class="flex flex-row flex-wrap gap-1">
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-bold font-Inter leading-none"
+                              >
+                                2nd Half</span
+                              >
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-normal font-Inter leading-none"
+                              >
+                                Extra Time 118"</span
+                              >
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    <div
+                      class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3"
+                    >
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Real-mDRID.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Real Madrid
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          7.30
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img src="./images/X.png" alt="x" class="mx-auto" />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Draw
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          2.80
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Manchest.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Manchest..
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          1.03
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                    </div>
+                  </div>
+                  <!-- single item end  -->
+                  <!-- single item start  -->
+                  <div>
+                    <div
+                      class="px-3 py-2 rounded-tl-lg rounded-tr-lg inline-flex justify-start items-center gap-2 cardBg bg-cover bg-no-repeat bg-top w-full"
+                    >
+                      <a
+                        href=""
+                        class="flex flex-row gap-2 items-center w-full"
+                      >
+                        <span>
+                          <img src="./images/UEFA.svg" alt="UEFA" />
+                        </span>
+                        <span class="flex flex-col gap-1">
+                          <span
+                            class="self-stretch inline-flex justify-start items-start gap-0.5"
+                          >
+                            <span
+                              class="justify-start text-text-body-primary text-xs font-bold font-Inter leading-none tracking-tight"
+                            >
+                              UEFA Champions League</span
+                            >
+                            <span>
+                              <img src="./images/Right.svg" alt="Right" />
+                            </span>
+                          </span>
+                          <span
+                            class="self-stretch flex flex-row justify-start items-center gap-1"
+                          >
+                            <span>
+                              <img src="./images/Time.svg" alt="time" />
+                            </span>
+                            <span class="flex flex-row flex-wrap gap-1">
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-bold font-Inter leading-none"
+                              >
+                                2nd Half</span
+                              >
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-normal font-Inter leading-none"
+                              >
+                                Extra Time 118"</span
+                              >
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    <div
+                      class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3"
+                    >
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Real-mDRID.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Real Madrid
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          7.30
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img src="./images/X.png" alt="x" class="mx-auto" />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Draw
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          2.80
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Manchest.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Manchest..
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          1.03
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                    </div>
+                  </div>
+                  <!-- single item end  -->
+                  <!-- single item start  -->
+                  <div>
+                    <div
+                      class="px-3 py-2 rounded-tl-lg rounded-tr-lg inline-flex justify-start items-center gap-2 cardBg bg-cover bg-no-repeat bg-top w-full"
+                    >
+                      <a
+                        href=""
+                        class="flex flex-row gap-2 items-center w-full"
+                      >
+                        <span>
+                          <img src="./images/UEFA.svg" alt="UEFA" />
+                        </span>
+                        <span class="flex flex-col gap-1">
+                          <span
+                            class="self-stretch inline-flex justify-start items-start gap-0.5"
+                          >
+                            <span
+                              class="justify-start text-text-body-primary text-xs font-bold font-Inter leading-none tracking-tight"
+                            >
+                              UEFA Champions League</span
+                            >
+                            <span>
+                              <img src="./images/Right.svg" alt="Right" />
+                            </span>
+                          </span>
+                          <span
+                            class="self-stretch flex flex-row justify-start items-center gap-1"
+                          >
+                            <span>
+                              <img src="./images/Time.svg" alt="time" />
+                            </span>
+                            <span class="flex flex-row flex-wrap gap-1">
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-bold font-Inter leading-none"
+                              >
+                                2nd Half</span
+                              >
+                              <span
+                                class="justify-start text-text-body-primary text-[10px] font-normal font-Inter leading-none"
+                              >
+                                Extra Time 118"</span
+                              >
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    <div
+                      class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3"
+                    >
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Real-mDRID.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Real Madrid
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          7.30
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img src="./images/X.png" alt="x" class="mx-auto" />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Draw
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          2.80
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                      <!-- single item start  -->
+                      <div
+                        class="flex flex-col gap-1 justify-center text-center"
+                      >
+                        <div
+                          class="flex justify-center items-center w-7 h-7 mx-auto"
+                        >
+                          <img
+                            src="./images/Manchest.png"
+                            alt="Real Mdrid"
+                            class="mx-auto"
+                          />
+                        </div>
+
+                        <h4
+                          class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal"
+                        >
+                          Manchest..
+                        </h4>
+                        <button
+                          class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary"
+                        >
+                          1.03
+                        </button>
+                      </div>
+                      <!-- single item end  -->
+                    </div>
+                  </div>
+                  <!-- single item end  -->
+                </div>
+              </div>
+              <div class="lg:text-center mt-7 lg:mt-14">
+                <a
+                  href=""
+                  class="px-4 lg:px-[22.5px] py-[9px] lg:py-3.5 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight inline-flex items-center gap-2 text-center justify-center text-text-action text-sm lg:text-base font-bold font-Inter leading-tight hover:bg-surface-action-primary hover:text-white hover:border-surface-action-primary transition-all"
+                >
+                  View all Sport Events
+                </a>
+              </div>
+            </div>
+
+            <!-- Slot Games (Empty placeholder) -->
+            <div data-tab-content="slot" class="tab-pane hidden">
+              <div class="overflow-x-auto overflow-y-hidden">
+                <div
+                  class="grid grid-cols-4 gap-[30px] lg:min-w-auto min-w-[1200px]"
+                >
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/temple.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Temple Tumble
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Temple Tumble</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/sweet.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Sweet Bonanza 1000
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Sweet Bonanza 1000</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/legacy.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Legacy of Kong
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Legacy of Kong</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/wisdom.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Wisdom of Athena
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Wisdom of Athena</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+                </div>
+              </div>
+
+              <div class="lg:text-center mt-7 lg:mt-14">
+                <a
+                  href=""
+                  class="px-4 lg:px-[22.5px] py-[9px] lg:py-3.5 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight inline-flex items-center gap-2 text-center justify-center text-text-action text-sm lg:text-base font-bold font-Inter leading-tight hover:bg-surface-action-primary hover:text-white hover:border-surface-action-primary transition-all"
+                >
+                  View all Slot Games
+                </a>
+              </div>
+            </div>
+
+            <!-- Casino Games (Empty placeholder) -->
+            <div data-tab-content="casino" class="tab-pane hidden">
+              <div class="overflow-x-auto overflow-y-hidden">
+                <div
+                  class="grid grid-cols-4 gap-[30px] lg:min-w-auto min-w-[1200px]"
+                >
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/super.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Super Speed BaccaratLive
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Super Speed Baccarat Live</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/lightning.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Lightning Dragon Tiger
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Lightning Dragon Tiger</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+                  <!-- single item start  -->
+
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/blackjack.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Blackjack
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Blackjack</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+                  <!-- single item start  -->
+                  <div class="w-full flex flex-col gap-2">
+                    <div class="relative group">
+                      <img
+                        src="./images/lightning-live.png"
+                        alt="temple"
+                        class="rounded-lg"
+                      />
+                      <div
+                        class="absolute left-0 top-0 w-full h-full z-10 p-3 bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700"
+                      >
+                        <div class="w-full">
+                          <h4
+                            class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight"
+                          >
+                            Lightning BaccaratLive
+                          </h4>
+                          <p
+                            class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none"
+                          >
+                            Game Provider
+                          </p>
+                        </div>
+                        <div
+                          class="w-40 h-16 flex flex-col justify-center items-center gap-2"
+                        >
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800"
+                          >
+                            Play Now
+                          </a>
+                          <a
+                            href=""
+                            class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white"
+                          >
+                            Play for Fun
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="flex flex-col">
+                      <span
+                        class="text-text-body-primary text-sm font-bold font-Inter leading-normal"
+                        >Lightning Baccarat Live</span
+                      >
+                      <span
+                        class="text-text-body-primary text-xs font-normal font-Inter leading-none"
+                        >Game Provider</span
+                      >
+                    </span>
+                  </div>
+
+                  <!-- single item end -->
+                </div>
+              </div>
+
+              <div class="lg:text-center mt-7 lg:mt-14">
+                <a
+                  href=""
+                  class="px-4 lg:px-[22.5px] py-[9px] lg:py-3.5 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight inline-flex items-center gap-2 text-center justify-center text-text-action text-sm lg:text-base font-bold font-Inter leading-tight hover:bg-surface-action-primary hover:text-white hover:border-surface-action-primary transition-all"
+                >
+                  View all Live Casino Tables
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hot end  -->
+
+      <!-- What do we offer start  -->
+      <section class="weOffer bg-surface-primary">
+        <!-- We offer start  -->
+        <div class="container">
+          <div class="lg:w-[940px] mx-auto bg-surface-secondary py-12 px-6">
+            <div class="text-center">
+              <div class="mb-8">
+                <h4
+                  class="text-text-headings text-xl lg:text-2xl font-bold font-Inter leading-loose"
+                >
+                  What do we offer?
+                </h4>
+                <p
+                  class="max-w-[459px] mx-auto w-full text-text-headings text-sm font-normal font-Inter leading-normal"
+                >
+                  GemBet offers premium casino games and sports betting,
+                  featuring top providers and nonstop thrills.
+                </p>
+              </div>
+
+              <div>
+                <div
+                  class="flex flex-row gap-4 lg:gap-6 justify-between w-[570px] max-w-full mx-auto"
+                >
+                  <div
+                    class="pr-6 border-r border-dark-tertiary flex flex-col items-start h-full"
+                  >
+                    <div class="flex items-center gap-1">
+                      <img
+                        src="./images/10k.svg"
+                        alt="10k"
+                        class="w-5 lg:w-auto"
+                      />
+                      <h4
+                        class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                      >
+                        10K+
+                      </h4>
+                    </div>
+                    <p
+                      class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                    >
+                      Slot games
+                    </p>
+                  </div>
+
+                  <div
+                    class="pr-6 border-r border-dark-tertiary flex flex-col items-start h-full"
+                  >
+                    <div class="flex items-center gap-1">
+                      <img
+                        src="./images/500.svg"
+                        alt="500+"
+                        class="w-5 lg:w-auto"
+                      />
+                      <h4
+                        class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                      >
+                        500+
+                      </h4>
+                    </div>
+                    <p
+                      class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                    >
+                      Sports Events
+                    </p>
+                  </div>
+                  <div
+                    class="pr-6 border-r border-dark-tertiary flex flex-col items-start h-full"
+                  >
+                    <div class="flex items-center gap-1">
+                      <img
+                        src="./images/20k.svg"
+                        alt="20k"
+                        class="w-5 lg:w-auto"
+                      />
+                      <h4
+                        class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                      >
+                        20k
+                      </h4>
+                    </div>
+                    <p
+                      class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                    >
+                      Casino Tables
+                    </p>
+                  </div>
+
+                  <div class="flex flex-col items-start h-full">
+                    <div class="flex items-center gap-1">
+                      <img
+                        src="./images/200.svg"
+                        alt="200+"
+                        class="w-5 lg:w-auto"
+                      />
+                      <h4
+                        class="text-text-body-primary text-sm lg:text-xl font-bold font-['Inter'] leading-normal"
+                      >
+                        200+
+                      </h4>
+                    </div>
+                    <p
+                      class="text-text-body-primary text-xs lg:text-base font-normal font-['Inter'] leading-tight"
+                    >
+                      Game Providers
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:mt-8 mt-4">
+              <ul
+                class="hidden lg:grid lg:grid-cols-5 grid-cols-3 gap-y-3 gap-x-2 xl:justify-between justify-center logoWrapp lg:w-[585px] max-w-full mx-auto"
+              >
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-1.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-2.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-3.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-4.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-5.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-6.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-7.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-8.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-9.svg" alt="image" />
+                  </div>
+                </li>
+                <li class="!h-auto">
+                  <div>
+                    <img src="./images/image-10.svg" alt="image" />
+                  </div>
+                </li>
+              </ul>
+              <!-- Slider Container -->
+              <div class="lg:hidden">
+                <div class="swiper whoSwiper relative w-full h-full">
+                  <div class="swiper-wrapper py-2">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-1.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-2.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-3.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-4.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-5.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-6.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-7.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-8.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-9.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide 10 -->
+                    <div class="swiper-slide">
+                      <div class="logoWrapp-container">
+                        <div>
+                          <img src="./images/image-10.svg" alt="image" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Custom Pagination -->
+                  <div class="flex justify-center items-center mt-6">
+                    <div
+                      class="custom-pagination flex gap-1 max-w-[110px]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- We offer end  -->
+      </section>
+      <!-- What do we offer end -->
+      <!-- slider reviews start  -->
+      <section class="bg-surface-primary">
+        <!-- slider start  -->
+        <div
+          class="container flex lg:flex-row flex-col justify-between items-center gap-6 py-8 lg:py-12 lg:order-2 order-1"
+        >
+          <div class="w-full lg:w-2/5">
+            <div class="flex flex-col justify-center gap-2 lg:gap-3">
+              <h4
+                class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-loose"
+              >
+                The Choice of Over 1 Million Players
+              </h4>
+              <p class="text-text-headings text-sm font-normal font-Inter">
+                Join a growing community of over 1 million players who choose
+                GemBet for top-tier casino games and sports betting. With
+                unbeatable variety, trusted providers, and thrilling features,
+                it’s easy to see why so many keep coming back.
+              </p>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/5 px-4">
+            <!-- Slider Container -->
+            <div class="swiper reviewSwiper relative w-full h-full">
+              <div class="swiper-wrapper py-2">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div
+                    class="w-full flex-shrink-0 p-6 sliderItem bg-cover bg-top-left border-[#19387E] rounded-lg min-h-[220px] relative"
+                  >
+                    <div class="absolute -top-5 right-4 bg-[#070D18] p-2 Z-99">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.74121 4.6328C8.64858 4.63519 8.55719 4.65473 8.47168 4.69042C8.47168 4.69042 7.03421 5.27642 5.67871 6.86913C4.32322 8.46183 3 11.1004 3 15.1367C2.99993 15.1733 3.00254 15.2099 3.00781 15.2461C2.98897 15.8153 3.08471 16.3824 3.28935 16.9139C3.49399 17.4453 3.80335 17.9302 4.19906 18.3398C4.59477 18.7494 5.06876 19.0752 5.59286 19.298C6.11697 19.5208 6.68051 19.636 7.25 19.6367C8.37717 19.6367 9.45818 19.1889 10.2552 18.3919C11.0522 17.5949 11.5 16.5139 11.5 15.3867C11.5 14.2595 11.0522 13.1785 10.2552 12.3815C9.45818 11.5845 8.37717 11.1367 7.25 11.1367C6.39523 11.1369 5.56039 11.3949 4.85449 11.8769C5.28886 10.0253 6.06108 8.73503 6.82129 7.84178C7.96579 6.49699 9.02832 6.08299 9.02832 6.08299C9.19344 6.01968 9.33087 5.90006 9.41636 5.74526C9.50185 5.59047 9.5299 5.41044 9.49556 5.23697C9.46121 5.0635 9.36669 4.90774 9.22866 4.7972C9.09064 4.68665 8.91799 4.62842 8.74121 4.6328ZM19.2412 4.6328C19.1486 4.63519 19.0572 4.65473 18.9717 4.69042C18.9717 4.69042 17.5342 5.27642 16.1787 6.86913C14.8232 8.46183 13.5 11.1004 13.5 15.1367C13.4999 15.1733 13.5025 15.2099 13.5078 15.2461C13.489 15.8153 13.5847 16.3824 13.7893 16.9139C13.994 17.4453 14.3034 17.9302 14.6991 18.3398C15.0948 18.7494 15.5688 19.0752 16.0929 19.298C16.617 19.5208 17.1805 19.636 17.75 19.6367C18.8772 19.6367 19.9582 19.1889 20.7552 18.3919C21.5522 17.5949 22 16.5139 22 15.3867C22 14.2595 21.5522 13.1785 20.7552 12.3815C19.9582 11.5845 18.8772 11.1367 17.75 11.1367C16.8952 11.1369 16.0604 11.3949 15.3545 11.8769C15.7889 10.0253 16.5611 8.73503 17.3213 7.84178C18.4658 6.49699 19.5283 6.08299 19.5283 6.08299C19.6934 6.01968 19.8309 5.90006 19.9164 5.74526C20.0019 5.59047 20.0299 5.41044 19.9956 5.23697C19.9612 5.0635 19.8667 4.90774 19.7287 4.7972C19.5906 4.68665 19.418 4.62842 19.2412 4.6328Z"
+                          fill="#19387E"
+                        />
+                      </svg>
+                    </div>
+                    <h4
+                      class="text-text-headings text-base font-bold font-Inter leading-normal py-2"
+                    >
+                      I feel valued as a player here
+                    </h4>
+                    <p
+                      class="text-text-body-primary text-sm font-normal font-Inter"
+                    >
+                      They are constantly sending me new offers and bonuses and
+                      that makes me happy. The games are fair, I win pretty
+                      often.
+                    </p>
+                    <h5
+                      class="justify-start text-[#F2F5FD] text-sm font-bold font-Inter mt-2"
+                    >
+                      W.S.
+                    </h5>
+                    <h6 class="text-[#ACAFBB] text-xs font-Inter mt-[2px]">
+                      Singapore
+                    </h6>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div
+                    class="w-full flex-shrink-0 p-6 sliderItem bg-cover bg-top-left border-[#19387E] rounded-lg min-h-[220px] relative"
+                  >
+                    <div class="absolute -top-5 right-4 bg-[#070D18] p-2 Z-99">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.74121 4.6328C8.64858 4.63519 8.55719 4.65473 8.47168 4.69042C8.47168 4.69042 7.03421 5.27642 5.67871 6.86913C4.32322 8.46183 3 11.1004 3 15.1367C2.99993 15.1733 3.00254 15.2099 3.00781 15.2461C2.98897 15.8153 3.08471 16.3824 3.28935 16.9139C3.49399 17.4453 3.80335 17.9302 4.19906 18.3398C4.59477 18.7494 5.06876 19.0752 5.59286 19.298C6.11697 19.5208 6.68051 19.636 7.25 19.6367C8.37717 19.6367 9.45818 19.1889 10.2552 18.3919C11.0522 17.5949 11.5 16.5139 11.5 15.3867C11.5 14.2595 11.0522 13.1785 10.2552 12.3815C9.45818 11.5845 8.37717 11.1367 7.25 11.1367C6.39523 11.1369 5.56039 11.3949 4.85449 11.8769C5.28886 10.0253 6.06108 8.73503 6.82129 7.84178C7.96579 6.49699 9.02832 6.08299 9.02832 6.08299C9.19344 6.01968 9.33087 5.90006 9.41636 5.74526C9.50185 5.59047 9.5299 5.41044 9.49556 5.23697C9.46121 5.0635 9.36669 4.90774 9.22866 4.7972C9.09064 4.68665 8.91799 4.62842 8.74121 4.6328ZM19.2412 4.6328C19.1486 4.63519 19.0572 4.65473 18.9717 4.69042C18.9717 4.69042 17.5342 5.27642 16.1787 6.86913C14.8232 8.46183 13.5 11.1004 13.5 15.1367C13.4999 15.1733 13.5025 15.2099 13.5078 15.2461C13.489 15.8153 13.5847 16.3824 13.7893 16.9139C13.994 17.4453 14.3034 17.9302 14.6991 18.3398C15.0948 18.7494 15.5688 19.0752 16.0929 19.298C16.617 19.5208 17.1805 19.636 17.75 19.6367C18.8772 19.6367 19.9582 19.1889 20.7552 18.3919C21.5522 17.5949 22 16.5139 22 15.3867C22 14.2595 21.5522 13.1785 20.7552 12.3815C19.9582 11.5845 18.8772 11.1367 17.75 11.1367C16.8952 11.1369 16.0604 11.3949 15.3545 11.8769C15.7889 10.0253 16.5611 8.73503 17.3213 7.84178C18.4658 6.49699 19.5283 6.08299 19.5283 6.08299C19.6934 6.01968 19.8309 5.90006 19.9164 5.74526C20.0019 5.59047 20.0299 5.41044 19.9956 5.23697C19.9612 5.0635 19.8667 4.90774 19.7287 4.7972C19.5906 4.68665 19.418 4.62842 19.2412 4.6328Z"
+                          fill="#19387E"
+                        />
+                      </svg>
+                    </div>
+                    <h4
+                      class="text-text-headings text-base font-bold font-Inter leading-normal py-2"
+                    >
+                      This was easy one
+                    </h4>
+                    <p
+                      class="text-text-body-primary text-sm font-normal font-Inter"
+                    >
+                      This was easy one. Made my first deposit for $300 and got
+                      a ton of bonus.. paid my rake and cashed out. Quick in and
+                      out! Thanks
+                    </p>
+                    <h5
+                      class="justify-start text-[#F2F5FD] text-sm font-bold font-Inter mt-2"
+                    >
+                      K.D.
+                    </h5>
+                    <h6 class="text-[#ACAFBB] text-xs font-Inter mt-[2px]">
+                      Malaysia
+                    </h6>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div
+                    class="w-full flex-shrink-0 p-6 sliderItem bg-cover bg-top-left border-[#19387E] rounded-lg min-h-[220px] relative"
+                  >
+                    <div class="absolute -top-5 right-4 bg-[#070D18] p-2 Z-99">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.74121 4.6328C8.64858 4.63519 8.55719 4.65473 8.47168 4.69042C8.47168 4.69042 7.03421 5.27642 5.67871 6.86913C4.32322 8.46183 3 11.1004 3 15.1367C2.99993 15.1733 3.00254 15.2099 3.00781 15.2461C2.98897 15.8153 3.08471 16.3824 3.28935 16.9139C3.49399 17.4453 3.80335 17.9302 4.19906 18.3398C4.59477 18.7494 5.06876 19.0752 5.59286 19.298C6.11697 19.5208 6.68051 19.636 7.25 19.6367C8.37717 19.6367 9.45818 19.1889 10.2552 18.3919C11.0522 17.5949 11.5 16.5139 11.5 15.3867C11.5 14.2595 11.0522 13.1785 10.2552 12.3815C9.45818 11.5845 8.37717 11.1367 7.25 11.1367C6.39523 11.1369 5.56039 11.3949 4.85449 11.8769C5.28886 10.0253 6.06108 8.73503 6.82129 7.84178C7.96579 6.49699 9.02832 6.08299 9.02832 6.08299C9.19344 6.01968 9.33087 5.90006 9.41636 5.74526C9.50185 5.59047 9.5299 5.41044 9.49556 5.23697C9.46121 5.0635 9.36669 4.90774 9.22866 4.7972C9.09064 4.68665 8.91799 4.62842 8.74121 4.6328ZM19.2412 4.6328C19.1486 4.63519 19.0572 4.65473 18.9717 4.69042C18.9717 4.69042 17.5342 5.27642 16.1787 6.86913C14.8232 8.46183 13.5 11.1004 13.5 15.1367C13.4999 15.1733 13.5025 15.2099 13.5078 15.2461C13.489 15.8153 13.5847 16.3824 13.7893 16.9139C13.994 17.4453 14.3034 17.9302 14.6991 18.3398C15.0948 18.7494 15.5688 19.0752 16.0929 19.298C16.617 19.5208 17.1805 19.636 17.75 19.6367C18.8772 19.6367 19.9582 19.1889 20.7552 18.3919C21.5522 17.5949 22 16.5139 22 15.3867C22 14.2595 21.5522 13.1785 20.7552 12.3815C19.9582 11.5845 18.8772 11.1367 17.75 11.1367C16.8952 11.1369 16.0604 11.3949 15.3545 11.8769C15.7889 10.0253 16.5611 8.73503 17.3213 7.84178C18.4658 6.49699 19.5283 6.08299 19.5283 6.08299C19.6934 6.01968 19.8309 5.90006 19.9164 5.74526C20.0019 5.59047 20.0299 5.41044 19.9956 5.23697C19.9612 5.0635 19.8667 4.90774 19.7287 4.7972C19.5906 4.68665 19.418 4.62842 19.2412 4.6328Z"
+                          fill="#19387E"
+                        />
+                      </svg>
+                    </div>
+                    <h4
+                      class="text-text-headings text-base font-bold font-Inter leading-normal py-2"
+                    >
+                      Very hard to find anything better
+                    </h4>
+                    <p
+                      class="text-text-body-primary text-sm font-normal font-Inter"
+                    >
+                      At least in here Malaysia. They are innovative and new
+                      games are fun! I am satisfied. Many thanks
+                    </p>
+                    <h5
+                      class="justify-start text-[#F2F5FD] text-sm font-bold font-Inter mt-2"
+                    >
+                      S.A.
+                    </h5>
+                    <h6 class="text-[#ACAFBB] text-xs font-Inter mt-[2px]">
+                      Malaysia
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <!-- Custom Pagination -->
+              <div class="flex justify-between items-center mt-6">
+                <div class="text-center flex">
+                  <img
+                    src="./images/trustpilot.svg"
+                    class="max-w-[68px]"
+                    alt="trustpilot"
+                  />
+                </div>
+                <div class="custom-pagination flex gap-1 max-w-[110px]"></div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+          </div>
+        </div>
+      </section>
+      <!-- slider end -->
+
+      <!-- Unlock start  -->
+      <section class="py-12 lg:py-20 bg-[#17274B]">
+        <div class="container flex-col flex gap-4 lg:gap-8">
+          <h2
+            class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-loose lg:text-center"
+          >
+            Claim Your Preferred Promotion
+          </h2>
+          <div class="overflow-x-auto overflow-y-hidden">
+            <div class="hidden lg:grid grid-cols-3 gap-6 min-w-[940px]">
+              <!-- single item start  -->
+              <div
+                class="rounded-lg flex flex-col item-start xl:justify-center bg-[#0E192D]"
+              >
+                <div class="">
+                  <img
+                    src="./images/claim-01.png"
+                    class="rounded-t-lg"
+                    alt="unlock"
+                  />
+                </div>
+                <div class="flex flex-col p-5">
+                  <h3
+                    class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-[32px]"
+                  >
+                    250% Welcome bonus
+                  </h3>
+                  <p
+                    class="text-text-headings text-xs lg:text-sm font-normal font-Inter leading-normal pt-1 pb-3"
+                  >
+                    <strong>Get a 250% Welcome Bonus!</strong> Up to SGD 1.000
+                    for Sports, Slots & Live Casino on your first deposit.
+                  </p>
+                  <div>
+                    <a
+                      href="#"
+                      class="text-xs bg-[#007A35] font-bold text-[#E5EAFA] rounded-full hover:bg-[#E5EAFA] hover:text-[#007A35] px-4 py-2 inline-block"
+                      >Join to Claim</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- single item end  -->
+
+              <!-- single item start  -->
+              <div
+                class="rounded-lg flex flex-col item-start xl:justify-center bg-[#0E192D]"
+              >
+                <div class="">
+                  <img
+                    src="./images/claim-02.png"
+                    class="rounded-t-lg"
+                    alt="unlock"
+                  />
+                </div>
+                <div class="flex flex-col p-5">
+                  <h3
+                    class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-[32px]"
+                  >
+                    Earn SGD 1,000+ per referral
+                  </h3>
+                  <p
+                    class="text-text-headings text-xs lg:text-sm font-normal font-Inter leading-normal pt-1 pb-3"
+                  >
+                    <strong>Get a 250% Welcome Bonus!</strong> Up to SGD 1.000
+                    for Sports, Slots & Live Casino on your first deposit.
+                  </p>
+                  <div>
+                    <a
+                      href="#"
+                      class="text-xs bg-[#007A35] font-bold text-[#E5EAFA] rounded-full hover:bg-[#E5EAFA] hover:text-[#007A35] px-4 py-2 inline-block"
+                      >Join to Claim</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- single item end  -->
+
+              <!-- single item start  -->
+              <div
+                class="rounded-lg flex flex-col item-start xl:justify-center bg-[#0E192D]"
+              >
+                <div class="">
+                  <img
+                    src="./images/claim-03.png"
+                    class="rounded-t-lg"
+                    alt="unlock"
+                  />
+                </div>
+                <div class="flex flex-col p-5">
+                  <h3
+                    class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-[32px]"
+                  >
+                    Weekly Free Slots Spins
+                  </h3>
+                  <p
+                    class="text-text-headings text-xs lg:text-sm font-normal font-Inter leading-normal pt-1 pb-3"
+                  >
+                    <strong>Get a 250% Welcome Bonus!</strong> Up to SGD 1.000
+                    for Sports, Slots & Live Casino on your first deposit.
+                  </p>
+                  <div>
+                    <a
+                      href="#"
+                      class="text-xs bg-[#007A35] font-bold text-[#E5EAFA] rounded-full hover:bg-[#E5EAFA] hover:text-[#007A35] px-4 py-2 inline-block"
+                      >Join to Claim</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- single item end  -->
+            </div>
+            <div class="lg:hidden w-full">
+              <div class="swiper claimSwiper relative w-full h-full">
+                <div class="swiper-wrapper py-2">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="rounded-lg flex flex-col item-start xl:justify-center bg-[#0E192D]"
+                    >
+                      <div class="">
+                        <img
+                          src="./images/claim-01.png"
+                          class="rounded-t-lg"
+                          alt="unlock"
+                        />
+                      </div>
+                      <div class="flex flex-col p-5">
+                        <h3
+                          class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-[32px]"
+                        >
+                          250% Welcome bonus
+                        </h3>
+                        <p
+                          class="text-text-headings text-xs lg:text-sm font-normal font-Inter leading-normal pt-1 pb-3"
+                        >
+                          <strong>Get a 250% Welcome Bonus!</strong> Up to SGD
+                          1.000 for Sports, Slots & Live Casino on your first
+                          deposit.
+                        </p>
+                        <div>
+                          <a
+                            href="#"
+                            class="text-xs bg-[#007A35] font-bold text-[#E5EAFA] rounded-full hover:bg-[#E5EAFA] hover:text-[#007A35] px-4 py-2 inline-block"
+                            >Join to Claim</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="rounded-lg flex flex-col item-start xl:justify-center bg-[#0E192D]"
+                    >
+                      <div class="">
+                        <img
+                          src="./images/claim-02.png"
+                          class="rounded-t-lg"
+                          alt="unlock"
+                        />
+                      </div>
+                      <div class="flex flex-col p-5">
+                        <h3
+                          class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-[32px]"
+                        >
+                          Earn SGD 1,000+ per referral
+                        </h3>
+                        <p
+                          class="text-text-headings text-xs lg:text-sm font-normal font-Inter leading-normal pt-1 pb-3"
+                        >
+                          <strong>Get a 250% Welcome Bonus!</strong> Up to SGD
+                          1.000 for Sports, Slots & Live Casino on your first
+                          deposit.
+                        </p>
+                        <div>
+                          <a
+                            href="#"
+                            class="text-xs bg-[#007A35] font-bold text-[#E5EAFA] rounded-full hover:bg-[#E5EAFA] hover:text-[#007A35] px-4 py-2 inline-block"
+                            >Join to Claim</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="rounded-lg flex flex-col item-start xl:justify-center bg-[#0E192D]"
+                    >
+                      <div class="">
+                        <img
+                          src="./images/claim-03.png"
+                          class="rounded-t-lg"
+                          alt="unlock"
+                        />
+                      </div>
+                      <div class="flex flex-col p-5">
+                        <h3
+                          class="text-text-headings text-xl lg:text-2xl font-bold font-Inter lg:leading-[32px]"
+                        >
+                          Weekly Free Slots Spins
+                        </h3>
+                        <p
+                          class="text-text-headings text-xs lg:text-sm font-normal font-Inter leading-normal pt-1 pb-3"
+                        >
+                          <strong>Get a 250% Welcome Bonus!</strong> Up to SGD
+                          1.000 for Sports, Slots & Live Casino on your first
+                          deposit.
+                        </p>
+                        <div>
+                          <a
+                            href="#"
+                            class="text-xs bg-[#007A35] font-bold text-[#E5EAFA] rounded-full hover:bg-[#E5EAFA] hover:text-[#007A35] px-4 py-2 inline-block"
+                            >Join to Claim</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Custom Pagination -->
+                <div class="flex justify-center items-center mt-6">
+                  <div
+                    class="custom-pagination-claim flex gap-1 max-w-[110px]"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Unlock end  -->
+
+      <!-- Trust start  -->
+      <section class="trust py-16 lg:py-20 bg-surface-primary grid grid-cols-1">
+        <div
+          class="container flex flex-col gap-8 lg:order-1 order-2 lg:mt-0 mt-16"
+        >
+          <div class="flex flex-col gap-3 justify-center text-center">
+            <h2
+              class="text-text-headings text-xl lg:text-2xl font-bold font-Inter leading-normal lg:leading-[32px]"
+            >
+              Trust and Security You Can Count On
+            </h2>
+            <p
+              class="text-center justify-start text-text-headings text-sm font-normal font-Inter"
+            >
+              Experience peace of mind with our licensed and secure payment
+              options for every transaction.
+            </p>
+          </div>
+          <div
+            class="hidden lg:flex justify-center items-center flex-col gap-3"
+          >
+            <ul
+              class="flex flex-row lg:gap-3 gap-x-3 gap-y-3 flex-wrap items-center justify-center logoWrapp"
+            >
+              <li>
+                <div>
+                  <img src="./images/trust-1.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-2.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-3.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-4.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-5.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-6.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-7.svg" alt="trust" />
+                </div>
+              </li>
+            </ul>
+
+            <ul
+              class="flex flex-row gap-x-3 gap-y-3 flex-wrap items-center justify-center logoWrapp"
+            >
+              <li>
+                <div>
+                  <img src="./images/trust-8.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-9.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-10.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-11.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-12.svg" alt="trust" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/trust-13.svg" alt="trust" />
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:hidden w-full">
+            <div class="swiper trustSwiper relative w-full h-full">
+              <div class="swiper-wrapper py-2">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-1.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-1.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-1.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-4.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-5.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-6.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-7.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-8.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-9.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-10.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 11 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-11.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 12 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-12.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 13 -->
+                <div class="swiper-slide">
+                  <div class="logoTrust-container">
+                    <div>
+                      <img src="./images/trust-13.svg" alt="image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Custom Pagination -->
+              <div class="flex justify-center items-center mt-6">
+                <div
+                  class="custom-pagination-trust flex gap-1 max-w-[110px]"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Trust end  -->
+
+      <!-- join the start  -->
+      <section class="join bg-cover lg:bg-right bg-center py-16">
+        <div class="container">
+          <div
+            class="flex flex-col justify-start items-start gap-3 max-w-[190px] lg:max-w-[484px] w-full"
+          >
+            <h2
+              class="text-text-headings text-xl lg:text-4xl font-bold font-Inter leading-normal lg:leading-10"
+            >
+              Are you ready to start winning?
+            </h2>
+          </div>
+          <div class="mt-6">
+            <a
+              href=""
+              class="px-6 lg:px-[35px] py-3.5 lg:py-4 bg-green-700 hover:bg-green-800 rounded-full inline-flex items-center text-center justify-center text-text-on-action text-base lg:text-xl font-bold font-Inter leading-normal"
+            >
+              Unlock Bonus Now
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- join the end -->
+
+      <!-- faq start  -->
+      <section class="bg-surface-primary py-9 lg:py-12">
+        <div class="container">
+          <div class="flex flex-col gap-3 lg:mb-12 mb-6">
+            <h2
+              class="text-text-headings text-2xl lg:text-4xl font-bold font-Inter leading-loose lg:leading-10 text-start"
+            >
+              FAQs
+            </h2>
+            <p
+              class="text-text-headings text-base font-normal font-Inter leading-tight text-start"
+            >
+              Find answers to your questions and get started with confidence.
+            </p>
+          </div>
+
+          <!-- FAQ Item -->
+          <!-- single item start  -->
+          <div>
+            <button
+              class="faq-toggle w-full text-left pl-4 pr-2 py-2 border-b-2 border-border-dark-secondary flex justify-between items-center text-text-body-primary text-sm lg:text-base font-bold font-Inter leading-tight cursor-pointer"
+            >
+              Is GemBet secure?
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="faq-icon transition-transform duration-300 text-gray-400"
+                width="32"
+                height="33"
+                viewBox="0 0 32 33"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.38654 11.8598C7.86676 12.3796 7.86676 13.2326 8.38654 13.7524L15.0504 20.4162C15.5702 20.936 16.4099 20.936 16.9296 20.4162L23.6069 13.7524C24.1266 13.2326 24.1266 12.3929 23.6069 11.8731C23.0871 11.3534 22.2474 11.3534 21.7276 11.8731L16.01 17.5908L10.2791 11.8598C9.7593 11.34 8.90633 11.34 8.38654 11.8598Z"
+                  fill="#E5EAFA"
+                />
+              </svg>
+            </button>
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p
+                class="p-4 justify-start text-text-body-primary text-xs lg:text-sm font-normal font-Inter leading-tight"
+              >
+                Absolutely! GemBet is licensed and employs advanced security
+                measures to protect your data. We prioritize your safety and
+                privacy, ensuring a secure gaming environment.
+              </p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div>
+            <button
+              class="faq-toggle w-full text-left pl-4 pr-2 py-2 border-b-2 border-border-dark-secondary flex justify-between items-center text-text-body-primary text-sm lg:text-base font-bold font-Inter leading-tight cursor-pointer"
+            >
+              What payment methods?
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="faq-icon transition-transform duration-300 text-gray-400"
+                width="32"
+                height="33"
+                viewBox="0 0 32 33"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.38654 11.8598C7.86676 12.3796 7.86676 13.2326 8.38654 13.7524L15.0504 20.4162C15.5702 20.936 16.4099 20.936 16.9296 20.4162L23.6069 13.7524C24.1266 13.2326 24.1266 12.3929 23.6069 11.8731C23.0871 11.3534 22.2474 11.3534 21.7276 11.8731L16.01 17.5908L10.2791 11.8598C9.7593 11.34 8.90633 11.34 8.38654 11.8598Z"
+                  fill="#E5EAFA"
+                />
+              </svg>
+            </button>
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p
+                class="p-4 justify-start text-text-body-primary text-xs lg:text-sm font-normal font-Inter leading-tight"
+              >
+                Absolutely! GemBet is licensed and employs advanced security
+                measures to protect your data. We prioritize your safety and
+                privacy, ensuring a secure gaming environment.
+              </p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div>
+            <button
+              class="faq-toggle w-full text-left pl-4 pr-2 py-2 border-b-2 border-border-dark-secondary flex justify-between items-center text-text-body-primary text-sm lg:text-base font-bold font-Inter leading-tight cursor-pointer"
+            >
+              How to sign up?
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="faq-icon transition-transform duration-300 text-gray-400"
+                width="32"
+                height="33"
+                viewBox="0 0 32 33"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.38654 11.8598C7.86676 12.3796 7.86676 13.2326 8.38654 13.7524L15.0504 20.4162C15.5702 20.936 16.4099 20.936 16.9296 20.4162L23.6069 13.7524C24.1266 13.2326 24.1266 12.3929 23.6069 11.8731C23.0871 11.3534 22.2474 11.3534 21.7276 11.8731L16.01 17.5908L10.2791 11.8598C9.7593 11.34 8.90633 11.34 8.38654 11.8598Z"
+                  fill="#E5EAFA"
+                />
+              </svg>
+            </button>
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p
+                class="p-4 justify-start text-text-body-primary text-xs lg:text-sm font-normal font-Inter leading-tight"
+              >
+                Absolutely! GemBet is licensed and employs advanced security
+                measures to protect your data. We prioritize your safety and
+                privacy, ensuring a secure gaming environment.
+              </p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div>
+            <button
+              class="faq-toggle w-full text-left pl-4 pr-2 py-2 border-b-2 border-border-dark-secondary flex justify-between items-center text-text-body-primary text-sm lg:text-base font-bold font-Inter leading-tight cursor-pointer"
+            >
+              Are there bonuses?
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="faq-icon transition-transform duration-300 text-gray-400"
+                width="32"
+                height="33"
+                viewBox="0 0 32 33"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.38654 11.8598C7.86676 12.3796 7.86676 13.2326 8.38654 13.7524L15.0504 20.4162C15.5702 20.936 16.4099 20.936 16.9296 20.4162L23.6069 13.7524C24.1266 13.2326 24.1266 12.3929 23.6069 11.8731C23.0871 11.3534 22.2474 11.3534 21.7276 11.8731L16.01 17.5908L10.2791 11.8598C9.7593 11.34 8.90633 11.34 8.38654 11.8598Z"
+                  fill="#E5EAFA"
+                />
+              </svg>
+            </button>
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p
+                class="p-4 justify-start text-text-body-primary text-xs lg:text-sm font-normal font-Inter leading-tight"
+              >
+                Absolutely! GemBet is licensed and employs advanced security
+                measures to protect your data. We prioritize your safety and
+                privacy, ensuring a secure gaming environment.
+              </p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div>
+            <button
+              class="faq-toggle w-full text-left pl-4 pr-2 py-2 border-b-2 border-border-dark-secondary flex justify-between items-center text-text-body-primary text-sm lg:text-base font-bold font-Inter leading-tight cursor-pointer"
+            >
+              What games available?
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="faq-icon transition-transform duration-300 text-gray-400"
+                width="32"
+                height="33"
+                viewBox="0 0 32 33"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.38654 11.8598C7.86676 12.3796 7.86676 13.2326 8.38654 13.7524L15.0504 20.4162C15.5702 20.936 16.4099 20.936 16.9296 20.4162L23.6069 13.7524C24.1266 13.2326 24.1266 12.3929 23.6069 11.8731C23.0871 11.3534 22.2474 11.3534 21.7276 11.8731L16.01 17.5908L10.2791 11.8598C9.7593 11.34 8.90633 11.34 8.38654 11.8598Z"
+                  fill="#E5EAFA"
+                />
+              </svg>
+            </button>
+            <div
+              class="faq-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <p
+                class="p-4 justify-start text-text-body-primary text-xs lg:text-sm font-normal font-Inter leading-tight"
+              >
+                Absolutely! GemBet is licensed and employs advanced security
+                measures to protect your data. We prioritize your safety and
+                privacy, ensuring a secure gaming environment.
+              </p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <div class="flex justify-center mt-12">
+            <div
+              class="px-4 py-1.5 bg-surface-secondary rounded-lg inline-flex flex-col justify-center items-start gap-2.5"
+            >
+              <div
+                class="self-stretch inline-flex justify-start items-center gap-1"
+              >
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.3419 1.67468C6.28611 1.48376 2.91675 4.7319 2.91675 8.74987V13.5415C2.91675 14.7385 3.86084 15.7042 5.03507 15.7982C5.13058 17.4326 6.4679 18.7499 8.12508 18.7499H8.54744C8.73784 19.0012 9.03634 19.1665 9.37508 19.1665H10.6251C11.1992 19.1665 11.6667 18.6995 11.6667 18.1249C11.6667 17.5503 11.1992 17.0832 10.6251 17.0832H9.37508C9.03634 17.0832 8.73784 17.2486 8.54744 17.4999H8.12508C7.15604 17.4999 6.39845 16.7715 6.29159 15.8332H7.29175C7.4575 15.8332 7.61646 15.7673 7.73367 15.6501C7.85088 15.5329 7.91673 15.374 7.91675 15.2082V10.6249C7.91673 10.4591 7.85088 10.3002 7.73367 10.183C7.61646 10.0657 7.4575 9.99989 7.29175 9.99987H4.16675V8.74987C4.16675 5.42702 6.92074 2.7648 10.2825 2.92305C13.4135 3.07027 15.8334 5.77488 15.8334 8.93217V9.99987H12.7084C12.5427 9.99989 12.3837 10.0657 12.2665 10.183C12.1493 10.3002 12.0834 10.4591 12.0834 10.6249V15.2082C12.0834 15.374 12.1493 15.5329 12.2665 15.6501C12.3837 15.7673 12.5427 15.8332 12.7084 15.8332H14.7917C16.05 15.8332 17.0834 14.7998 17.0834 13.5415V8.93217C17.0834 5.13445 14.1584 1.85413 10.3419 1.67468ZM4.16675 11.2499H6.66675V14.5832H5.20841C4.62582 14.5832 4.16675 14.1241 4.16675 13.5415V11.2499ZM13.3334 11.2499H15.8334V13.5415C15.8334 14.1241 15.3743 14.5832 14.7917 14.5832H13.3334V11.2499Z"
+                      fill="#E5EAFA"
+                    />
+                  </svg>
+                </div>
+                <div class="justify-center">
+                  <span
+                    class="text-text-body-primary text-xs font-normal font-['Inter'] leading-none"
+                    >If you experience any issues, please contact </span
+                  ><a
+                    href=""
+                    class="text-text-headings text-xs font-bold font-['Inter'] underline leading-none hover:text-text-action"
+                    >Livechat</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- faq start  -->
+    </main>
+
+    <!-- footer start  -->
+    <footer class="lg:px-[72px] px-6 py-9 bg-surface-secondary">
+      <div class="">
+        <div class="grid lg:grid-cols-12 grid-cols-2 lg:gap-0 gap-6">
+          <div class="lg:col-span-2 col-span-1 flex flex-col gap-4">
+            <h4
+              class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose"
+            >
+              Games
+            </h4>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href=""
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Sports</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Slots
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Casino</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2 col-span-1 flex flex-col gap-4">
+            <h4
+              class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose"
+            >
+              Rewards
+            </h4>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Refer a Friend</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >VIP Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Promotions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Affiliate Program</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 col-span-1 flex flex-col gap-4">
+            <h4
+              class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose"
+            >
+              Information
+            </h4>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Bonus Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >AML Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >KYC Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Protection of Minors Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 col-span-1 flex flex-col gap-4">
+            <h4
+              class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose"
+            >
+              Support
+            </h4>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Sports Betting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Responsible Gaming (basic principles)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >Anti-Scam Certificate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                  >GemBet Authenticator</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-2 flex flex-col gap-4 text-center lg:text-start">
+            <h4
+              class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose"
+            >
+              Follow us
+            </h4>
+            <ul
+              class="flex md:flex-col flex-row justify-center lg:justify-start gap-2"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                >
+                  <span class="w-4"
+                    ><img src="./images/Telegram.svg" alt="Telegram"
+                  /></span>
+
+                  <span class="md:block hidden">Telegram</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                >
+                  <span class="w-4"
+                    ><img src="./images/TwitterX.svg" alt="Twitter"
+                  /></span>
+                  <span class="md:block hidden"> X (formerly Twitter)</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                >
+                  <span class="w-4"
+                    ><img src="./images/youtube.svg" alt="youtube"
+                  /></span>
+                  <span class="md:block hidden">Youtube</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                >
+                  <span class="w-4"
+                    ><img src="./images/instagram.svg" alt="Instagram"
+                  /></span>
+                  <span class="md:block hidden">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                >
+                  <span class="w-4"
+                    ><img src="./images/facebook.svg" alt="facebook"
+                  /></span>
+                  <span class="md:block hidden">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action"
+                >
+                  <span class="w-4"
+                    ><img src="./images/tiktok.svg" alt="tiktok"
+                  /></span>
+                  <span class="md:block hidden">TikTok</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="brandImage py-9">
+          <ul
+            class="flex flow-row flex-wrap gap-x-8 gap-y-[19px] items-center justify-center"
+          >
+            <li><img src="./images/Banking_logo_Paynow.svg" alt="paynow" /></li>
+            <li>
+              <img src="./images/Banking_logo_Surepay.svg" alt="Surepay" />
+            </li>
+            <li>
+              <img src="./images/Banking_logo_Truepay.svg" alt="Trupay" />
+            </li>
+            <li><img src="./images/Banking_logo_Skrill.svg" alt="Skrill" /></li>
+            <li>
+              <img src="./images/Banking_logo_Neteller.svg" alt="neteller" />
+            </li>
+            <li>
+              <img
+                src="./images/Banking_logo_eZeeWallet.svg"
+                alt="eZeeWallet"
+              />
+            </li>
+            <li><img src="./images/Banking_logo_BTC.svg" alt="BTC" /></li>
+            <li><img src="./images/Banking_logo_USDT.svg" alt="usd" /></li>
+            <li>
+              <img src="./images/Banking_logo_Litecoin.svg" alt="litecoin" />
+            </li>
+            <li>
+              <img src="./images/Banking_logo_Ethereum.svg" alt="Ethereum" />
+            </li>
+            <li><img src="./images/Banking_logo_ USDC.svg" alt="usdc" /></li>
+          </ul>
+        </div>
+        <div
+          class="grid lg:grid-cols-12 grid-cols-1 gap-9 lg:gap-[64px] items-center"
+        >
+          <div class="lg:col-span-9 lg:order-1 order-2">
+            <div class="flex flex-col gap-4">
+              <div class="">
+                <a href=""
+                  ><img src="./images/Logo.svg" alt="gembet" class="w-[105px]"
+                /></a>
+              </div>
+              <div class="flex flex-col gap-4">
+                <p
+                  class="text-text-body-primary text-[10px] font-normal font-Inter leading-normal"
+                >
+                  The website GemBet is operated by Rockman Enterprises Limited,
+                  a subsidiary of Grand Complications N.V., by the laws of
+                  Cyprus, registered in Cyprus with registered address 20
+                  Stasikratous, Cramvis Building, Office 203, Nicosia 1065,
+                  Cyprus, and registration number HE 381928. The governing law
+                  of the website is Cyprus law.<br />The website is owned by
+                  Grand Complications N.V., a company registered and established
+                  under the laws of Curacao, with registration number 164198 and
+                  registered address at Zuikertuintjeweg Z/N, (Zuikertuin Tower)
+                  Willemstad, Curacao. Grand Complications N.V. is licensed by
+                  the Government of Curacao, license no. 365/JAZ, sublicense
+                  GLH-OCCHKTW0705082018. It is the player’s sole responsibility
+                  to inquire about the existing laws and regulations of the
+                  given jurisdiction for online gambling.
+                </p>
+
+                <p
+                  class="text-text-body-primary text-[10px] font-normal font-Inter leading-normal"
+                >
+                  <strong>Statement:<br /></strong>
+
+                  Online Gambling may be illegal in the jurisdiction in which
+                  you are located; if so, you are not authorized to use your
+                  payment card to complete the transaction.<br />It is the
+                  Cardholder’s responsibility to know the laws concerning online
+                  Gambling in the Cardholder’s Country.<br />It is prohibited to
+                  participate in any Gambling activity if under 18 years old or
+                  the allowed age range in the given country of residence.<br />It
+                  is recommended that the Cardholder retains a copy of the
+                  Transaction Records and Merchant Policies and Rules.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-3 lg:order-2 order-1">
+            <h2
+              class="text-center justify-start text-text-headings text-base font-bold font-['Inter'] leading-tight md:hidden mb-4"
+            >
+              Certifications
+            </h2>
+            <img src="./images/Certifications.png" alt="Certificate" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <p
+            class="justify-start text-text-body-primary text-[10px] font-normal font-Inter leading-none"
+          >
+            © 2016 - 2025 GemBet® 5.2.1
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end  -->
+
+    <!-- Mobile Offcanvas -->
+    <div
+      class="offcanvas fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden"
+      id="mobileMenu"
+    >
+      <div class="bg-gray-900 text-white w-full max-w-full h-full p-4 relative">
+        <button
+          class="absolute top-4 right-4 text-2xl text-white cursor-pointer"
+          data-close-mobile
+        >
+          ×
+        </button>
+        <div class="mt-5">
+          <!-- Desktop Nav -->
+          <nav class="flex space-x-4 items-center text-center justify-center">
+            <ul class="flex flex-col gap-3">
+              <li class="relative dropdown flex justify-center">
+                <button
+                  class="dropdown-toggle flex justify-center items-center text-indigo-100 text-base font-medium hover:text-text-action transition-all font-Inter leading-tight cursor-pointer"
+                  data-dropdown
+                >
+                  Sports
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.51431 7.82698C5.18944 8.15184 5.18944 8.68495 5.51431 9.00982L9.67924 13.1747C10.0041 13.4996 10.5289 13.4996 10.8538 13.1747L15.027 9.00982C15.3519 8.68495 15.3519 8.16017 15.027 7.83531C14.7021 7.51044 14.1774 7.51044 13.8525 7.83531L10.279 11.4088L6.69715 7.82698C6.37228 7.50211 5.83917 7.50211 5.51431 7.82698Z"
+                      fill="#E5EAFA"
+                    />
+                  </svg>
+                </button>
+                <div class="dropdown-menu dropdown-content shadow-lg">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                    >Football</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                    >Basketball</a
+                  >
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                  >Slots</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                  >Live Casino</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                  >Promotions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                  >VIP Club</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- CTAs -->
+          <div class="flex items-center space-x-4 mt-4 justify-center">
+            <ul class="flex flex-row flex-wrap gap-3 items-center">
+              <li class="relative dropdown">
+                <button
+                  class="dropdown-toggle w-9 h-9 flex justify-center items-center bg-surface-input rounded-full"
+                  data-dropdown
+                >
+                  <!-- Search Icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      d="M8.54167 2.5C5.21481 2.5 2.5 5.21482 2.5 8.54167C2.5 11.8685 5.21481 14.5833 8.54167 14.5833C9.90548 14.5833 11.162 14.1221 12.1753 13.3545L16.0775 17.2559C16.1543 17.3358 16.2462 17.3997 16.348 17.4437C16.4498 17.4877 16.5593 17.5109 16.6702 17.512C16.781 17.5132 16.891 17.4922 16.9937 17.4502C17.0963 17.4083 17.1896 17.3464 17.268 17.268C17.3464 17.1896 17.4083 17.0963 17.4502 16.9937C17.4922 16.891 17.5132 16.781 17.512 16.6702C17.5109 16.5593 17.4877 16.4498 17.4437 16.348C17.3997 16.2462 17.3358 16.1543 17.2559 16.0775L13.3545 12.1753C14.1221 11.162 14.5833 9.90548 14.5833 8.54167C14.5833 5.21482 11.8685 2.5 8.54167 2.5ZM8.54167 4.16667C10.9678 4.16667 12.9167 6.11555 12.9167 8.54167C12.9167 9.70655 12.4642 10.7586 11.7285 11.5405C11.6569 11.5924 11.594 11.6553 11.5422 11.7269C10.76 12.4635 9.70738 12.9167 8.54167 12.9167C6.11555 12.9167 4.16667 10.9678 4.16667 8.54167C4.16667 6.11555 6.11555 4.16667 8.54167 4.16667Z"
+                      fill="#E5EAFA"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-content shadow-lg w-[250px] left-0 mt-2"
+                >
+                  <form
+                    class="relative flex items-center bg-white/80 backdrop-blur-md border border-gray-200 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                  >
+                    <!-- Search Icon -->
+                    <div class="pl-5 text-gray-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1011 18.5a7.5 7.5 0 005.65-2.85z"
+                        />
+                      </svg>
+                    </div>
+
+                    <!-- Input -->
+                    <input
+                      type="text"
+                      placeholder="Search now"
+                      class="w-full px-4 py-3 pl-3 pr-32 text-sm text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none"
+                    />
+
+                    <!-- Submit Button -->
+                    <button
+                      type="submit"
+                      class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-surface-action-primary text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="px-1 py-2 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-action text-sm font-bold font-Inter leading-none"
+                  >Log In
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="h-9 max-w-96 min-w-24 px-4 py-2 bg-surface-action-primary rounded-full inline-flex items-center gap-2 text-center justify-center text-text-on-action text-sm font-bold font-Inter leading-none"
+                  >Join Now
+                </a>
+              </li>
+              <li class="relative dropdown">
+                <button
+                  class="dropdown-toggle flex items-center space-x-2"
+                  data-dropdown
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_50731_275)">
+                      <path
+                        d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36Z"
+                        fill="#F0F0F0"
+                      />
+                      <path
+                        d="M13.3038 35.3803C11.0008 34.7595 8.88057 33.6935 7.04114 32.2797L13.3038 26.0161V35.3803ZM28.9591 32.2797C27.1196 33.6936 24.9987 34.7594 22.6954 35.3803V26.0161L28.9591 32.2797ZM3.72083 28.9594C2.30708 27.12 1.24112 24.9998 0.620239 22.6967H9.98352L3.72083 28.9594ZM35.38 22.6967C34.7592 24.9998 33.6931 27.12 32.2794 28.9594L26.0157 22.6967H35.38ZM9.9845 13.3051H0.620239C1.24103 11.0017 2.30691 8.88103 3.72083 7.04144L9.9845 13.3051ZM32.2794 7.04144C33.6932 8.88101 34.7592 11.0019 35.38 13.3051H26.0157L32.2794 7.04144ZM22.6954 0.620544C24.9988 1.2414 27.1195 2.30722 28.9591 3.72113L22.6954 9.9848V0.620544ZM13.3038 9.98383L7.04114 3.72113C8.88054 2.30738 11.0007 1.24142 13.3038 0.620544V9.98383Z"
+                        fill="#0052B4"
+                      />
+                      <path
+                        d="M18 0C18.7957 0 19.5791 0.0523075 20.3477 0.152344V15.6523H35.8477C35.9477 16.4208 36 17.2043 36 18C36 18.7958 35.9477 19.5791 35.8477 20.3477H20.3477V35.8477C19.5792 35.9478 18.7957 36 18 36C17.2042 36 16.4209 35.9477 15.6523 35.8477V20.3477H0.152344C0.0523016 19.5792 0 18.7958 0 18C0 17.2043 0.0523075 16.4209 0.152344 15.6523H15.6523V0.152344C16.4208 0.0523017 17.2042 0 18 0ZM13.3047 24.9092L6.42773 31.7861C6.02752 31.4499 5.64077 31.097 5.27148 30.7275L13.3037 22.6953H13.3047V24.9092ZM31.7861 29.5723C31.4499 29.9725 31.0969 30.3583 30.7275 30.7275L22.6953 22.6953H24.9092L31.7861 29.5723ZM13.3047 13.3047H11.0908L4.21387 6.42773C4.5501 6.02752 4.90304 5.64077 5.27246 5.27148L13.3047 13.3047ZM29.5723 4.21484C29.9724 4.55092 30.3584 4.90315 30.7275 5.27246L22.6953 13.3047V11.0908L29.5723 4.21484Z"
+                        fill="#D80027"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_50731_275">
+                        <rect width="36" height="36" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="dropdown-menu dropdown-content shadow-lg right-0">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                    >English</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all"
+                    >Spanish</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile bar start  -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-10 shadow-xl">
+      <ul
+        class="flex flex-row justify-between py-3 px-4 bg-surface-secondary shadow"
+      >
+        <li>
+          <button
+            class="justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
+            data-mobile-menu-toggle
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              class="mx-auto"
+            >
+              <path
+                d="M2.99999 3.75008C2.88956 3.74852 2.77992 3.76892 2.67745 3.8101C2.57498 3.85128 2.48171 3.91241 2.40307 3.98995C2.32443 4.06749 2.26198 4.15988 2.21936 4.26176C2.17673 4.36364 2.15479 4.47298 2.15479 4.58342C2.15479 4.69385 2.17673 4.80319 2.21936 4.90507C2.26198 5.00695 2.32443 5.09935 2.40307 5.17688C2.48171 5.25442 2.57498 5.31555 2.67745 5.35673C2.77992 5.39791 2.88956 5.41831 2.99999 5.41675H18C18.1104 5.41831 18.22 5.39791 18.3225 5.35673C18.425 5.31555 18.5183 5.25442 18.5969 5.17688C18.6755 5.09935 18.738 5.00695 18.7806 4.90507C18.8232 4.80319 18.8452 4.69385 18.8452 4.58342C18.8452 4.47298 18.8232 4.36364 18.7806 4.26176C18.738 4.15988 18.6755 4.06749 18.5969 3.98995C18.5183 3.91241 18.425 3.85128 18.3225 3.8101C18.22 3.76892 18.1104 3.74852 18 3.75008H2.99999ZM2.99999 9.16675C2.88956 9.16519 2.77992 9.18559 2.67745 9.22677C2.57498 9.26795 2.48171 9.32908 2.40307 9.40662C2.32443 9.48415 2.26198 9.57655 2.21936 9.67843C2.17673 9.78031 2.15479 9.88965 2.15479 10.0001C2.15479 10.1105 2.17673 10.2199 2.21936 10.3217C2.26198 10.4236 2.32443 10.516 2.40307 10.5936C2.48171 10.6711 2.57498 10.7322 2.67745 10.7734C2.77992 10.8146 2.88956 10.835 2.99999 10.8334H18C18.1104 10.835 18.22 10.8146 18.3225 10.7734C18.425 10.7322 18.5183 10.6711 18.5969 10.5936C18.6755 10.516 18.738 10.4236 18.7806 10.3217C18.8232 10.2199 18.8452 10.1105 18.8452 10.0001C18.8452 9.88965 18.8232 9.78031 18.7806 9.67843C18.738 9.57655 18.6755 9.48415 18.5969 9.40662C18.5183 9.32908 18.425 9.26795 18.3225 9.22677C18.22 9.18559 18.1104 9.16519 18 9.16675H2.99999ZM2.99999 14.5834C2.88956 14.5819 2.77992 14.6023 2.67745 14.6434C2.57498 14.6846 2.48171 14.7457 2.40307 14.8233C2.32443 14.9008 2.26198 14.9932 2.21936 15.0951C2.17673 15.197 2.15479 15.3063 2.15479 15.4168C2.15479 15.5272 2.17673 15.6365 2.21936 15.7384C2.26198 15.8403 2.32443 15.9327 2.40307 16.0102C2.48171 16.0878 2.57498 16.1489 2.67745 16.1901C2.77992 16.2312 2.88956 16.2516 2.99999 16.2501H18C18.1104 16.2516 18.22 16.2312 18.3225 16.1901C18.425 16.1489 18.5183 16.0878 18.5969 16.0102C18.6755 15.9327 18.738 15.8403 18.7806 15.7384C18.8232 15.6365 18.8452 15.5272 18.8452 15.4168C18.8452 15.3063 18.8232 15.197 18.7806 15.0951C18.738 14.9932 18.6755 14.9008 18.5969 14.8233C18.5183 14.7457 18.425 14.6846 18.3225 14.6434C18.22 14.6023 18.1104 14.5819 18 14.5834H2.99999Z"
+                fill="#E5EAFA"
+              />
+            </svg>
+            Menu
+          </button>
+        </li>
+
+        <li class="relative dropdown">
+          <button
+            class="open-modal justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
+            data-modal-target="modal-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="mx-auto"
+            >
+              <path
+                d="M8.54167 2.5C5.21481 2.5 2.5 5.21482 2.5 8.54167C2.5 11.8685 5.21481 14.5833 8.54167 14.5833C9.90548 14.5833 11.162 14.1221 12.1753 13.3545L16.0775 17.2559C16.1543 17.3358 16.2462 17.3997 16.348 17.4437C16.4498 17.4877 16.5593 17.5109 16.6702 17.512C16.781 17.5132 16.891 17.4922 16.9937 17.4502C17.0963 17.4083 17.1896 17.3464 17.268 17.268C17.3464 17.1896 17.4083 17.0963 17.4502 16.9937C17.4922 16.891 17.5132 16.781 17.512 16.6702C17.5109 16.5593 17.4877 16.4498 17.4437 16.348C17.3997 16.2462 17.3358 16.1543 17.2559 16.0775L13.3545 12.1753C14.1221 11.162 14.5833 9.90548 14.5833 8.54167C14.5833 5.21482 11.8685 2.5 8.54167 2.5ZM8.54167 4.16667C10.9678 4.16667 12.9167 6.11555 12.9167 8.54167C12.9167 9.70655 12.4642 10.7586 11.7285 11.5405C11.6569 11.5924 11.594 11.6553 11.5422 11.7269C10.76 12.4635 9.70738 12.9167 8.54167 12.9167C6.11555 12.9167 4.16667 10.9678 4.16667 8.54167C4.16667 6.11555 6.11555 4.16667 8.54167 4.16667Z"
+                fill="#E5EAFA"
+              />
+            </svg>
+            Search
+          </button>
+          <div
+            class="dropdown-menu dropdown-content shadow-lg w-[250px] -left-3 mx-auto bottom-10 mt-2"
+          >
+            <form
+              class="relative flex items-center bg-white/80 backdrop-blur-md border border-gray-200 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+            >
+              <!-- Search Icon -->
+              <div class="pl-5 text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1011 18.5a7.5 7.5 0 005.65-2.85z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Input -->
+              <input
+                type="text"
+                placeholder="Search now"
+                class="w-full px-4 py-3 pl-3 pr-24 text-sm text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none"
+              />
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-surface-action-primary text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </li>
+        <li>
+          <a
+            href=""
+            class="justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              class="mx-auto"
+            >
+              <path
+                d="M16.0596 15.958C14.591 17.425 12.5832 18.325 10.3711 18.333L10.3848 18.0898C12.0379 17.905 12.763 17.08 12.9277 16.8613C13.299 16.805 15.3061 16.477 16.0078 15.8662L16.0596 15.958ZM9.02441 13.4658C9.32208 13.6486 10.5785 14.3643 12.1816 14.4443C12.3419 15.0609 12.6426 16.3963 12.71 16.6982C12.5575 16.8921 11.8552 17.6743 10.2539 17.8242L10.2207 17.8213C10.1977 17.8191 10.1735 17.8167 10.1494 17.8145C10.113 17.8122 10.0739 17.8092 10.0342 17.8047C10.0043 17.8024 9.9743 17.7982 9.94336 17.7959C9.90912 17.7925 9.87238 17.7877 9.83594 17.7832C9.81285 17.781 9.7908 17.7788 9.7666 17.7754C9.76439 17.7754 9.76099 17.7744 9.75879 17.7744C9.71685 17.7699 9.67488 17.7644 9.63184 17.7588C9.51801 17.743 9.39759 17.7221 9.27051 17.6973C9.2397 17.6917 9.20769 17.6854 9.17578 17.6787C9.14373 17.6731 9.11128 17.6651 9.07812 17.6572C9.04498 17.6505 9.01178 17.6428 8.97754 17.6338C8.94329 17.6248 8.91023 17.6164 8.87598 17.6074C8.81307 17.5917 8.74786 17.5728 8.68164 17.5537C8.64075 17.5402 8.59961 17.5272 8.55762 17.5137C8.52119 17.5035 8.4848 17.4899 8.44727 17.4775C8.40969 17.4663 8.37266 17.452 8.33398 17.4385C8.30983 17.4306 8.28587 17.4212 8.26172 17.4111C8.23748 17.4021 8.21175 17.3939 8.1875 17.3838C8.1599 17.3725 8.13222 17.3609 8.10352 17.3496C8.09689 17.3474 8.08781 17.3442 8.08008 17.3408C8.07578 17.3397 8.07263 17.3371 8.06836 17.3359C8.01865 17.3157 7.96879 17.294 7.91797 17.2715L7.8125 17.2246C7.80593 17.2213 7.79966 17.2172 7.79199 17.2139C7.771 17.2037 7.74951 17.1947 7.72852 17.1846C7.66455 17.1542 7.59924 17.1216 7.53418 17.0879C7.50562 17.0733 7.47595 17.0577 7.44629 17.042C7.43966 17.0386 7.43228 17.0346 7.42676 17.0312H7.42578C7.41154 17.0234 7.39717 17.0156 7.38184 17.0078C7.36654 16.9989 7.35219 16.9913 7.33691 16.9824C7.27075 16.9464 7.20313 16.9067 7.13477 16.8662C7.13368 16.8662 7.131 16.8643 7.12988 16.8643C7.09784 16.844 7.06453 16.8241 7.03027 16.8027V16.7959C7.02154 16.7914 7.01275 16.786 7.00293 16.7793L6.98828 16.75C6.77835 16.3094 6.39911 15.5139 6.43652 14.7646L7.37012 14.2676L7.375 14.2646C8.03254 13.9525 8.79455 13.5785 9.02441 13.4658ZM3.92871 12.0527C4.20503 12.6095 4.9707 13.9765 6.17188 14.7529C6.1321 15.5046 6.46389 16.2707 6.69043 16.752L5.58398 16.7744H5.58301C4.26683 15.8097 3.24113 14.4563 2.6709 12.8809L2.81152 12.0752L3.92871 12.0527ZM18.4863 10.6172C18.3426 12.6141 17.5183 14.4034 16.252 15.7568L16.1846 15.6387C16.1989 15.6116 16.2122 15.5858 16.2266 15.5576C16.4841 15.0505 16.8695 14.2886 17.0928 13.085C17.7701 12.4562 18.3165 10.8867 18.4072 10.6172H18.4863ZM10.8076 7.58301C11.6089 7.72614 13.5706 8.14179 14.0381 8.54297C14.0392 8.54522 14.04 8.5459 14.04 8.5459C14.2047 8.72708 14.5305 10.4258 14.7559 11.9951C14.1934 12.58 12.7908 13.9698 12.2637 14.1816C10.5045 14.1162 9.11983 13.2121 9.10547 13.2031L9.10254 13.2012C8.93235 12.6242 8.45714 10.3623 8.35547 9.87207L10.8076 7.58301ZM15.6797 6.2627C16.42 6.50496 17.2097 6.83101 17.3369 6.99219C17.3513 7.02934 17.3729 7.0815 17.3994 7.14453C17.6215 7.67307 18.1717 8.98159 18.1816 10.1221V10.1426C18.1794 10.2518 18.1733 10.3601 18.1611 10.4648L18.1523 10.541V10.542L18.1514 10.541C17.9458 11.1586 17.4592 12.3465 16.9453 12.8525C16.4457 12.6215 15.3028 12.0814 15.0166 11.9473C14.9237 11.3031 14.5795 9.01172 14.29 8.44727L15.6797 6.2627ZM5.12402 9.14941C4.88974 9.43003 4.25192 10.3017 3.9248 11.7803L2.63086 11.8066L2.25977 11.2578C2.199 10.8465 2.16699 10.4262 2.16699 9.99805C2.167 8.54767 2.53275 7.18292 3.1748 5.99512H3.17383L4.62793 5.99023L5.12402 9.14941ZM7.51758 3.7334C8.16299 3.75482 9.78762 3.90935 10.2451 4.39844C10.3269 4.81703 10.5765 6.96899 10.624 7.38477L8.18457 9.66211L5.37109 9.00098L4.88379 5.89746C5.09818 5.65742 6.12404 4.55157 7.51758 3.7334ZM13.5625 2.34375C15.3539 3.13036 16.815 4.55175 17.6748 6.33008L17.4082 6.70508C17.0004 6.41898 16.0319 6.0929 15.7178 5.99023C15.2835 5.16311 14.5605 4.33569 13.5693 3.53223L13.5625 2.34375ZM10.3418 1.66699C11.3827 1.66704 12.3807 1.86636 13.2979 2.23145L13.3037 3.47168C11.6022 3.63962 10.6772 4.03063 10.3965 4.16699C10.1102 3.89891 9.55188 3.70122 8.73438 3.57617C8.26271 3.50409 7.83308 3.47582 7.62305 3.4668L7.66895 2.12305H7.66992C8.50759 1.82778 9.40688 1.66699 10.3418 1.66699Z"
+                fill="#E5EAFA"
+              />
+            </svg>
+            Sports
+          </a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              class="mx-auto"
+            >
+              <g clip-path="url(#clip0_50744_2305)">
+                <path
+                  d="M10.2917 1.25C6.96042 1.25 4.25 3.96042 4.25 7.29167V16.875C4.25 17.9088 5.09125 18.75 6.125 18.75H14.4583C15.4921 18.75 16.3333 17.9088 16.3333 16.875V7.29167C16.3333 3.96042 13.6229 1.25 10.2917 1.25ZM18.625 5.83333C18.2939 5.83337 17.9727 5.94606 17.7142 6.15288C17.4556 6.3597 17.2752 6.64834 17.2024 6.97134C17.1297 7.29433 17.1691 7.63246 17.314 7.93013C17.459 8.2278 17.7009 8.46729 18 8.60921V11.0417C18 11.3862 17.7196 11.6667 17.375 11.6667H17.1667V12.9167H17.375C18.4087 12.9167 19.25 12.0754 19.25 11.0417V8.60758C19.5482 8.46515 19.7892 8.22566 19.9334 7.92835C20.0777 7.63104 20.1167 7.29354 20.0441 6.97115C19.9715 6.64877 19.7915 6.3606 19.5337 6.15388C19.2759 5.94716 18.9555 5.83414 18.625 5.83333ZM7.16667 7.91667H8V12.5H7.16667C6.70625 12.5 6.33333 12.1271 6.33333 11.6667V8.75C6.33333 8.28958 6.70625 7.91667 7.16667 7.91667ZM9.25 7.91667H11.3333V12.5H9.25V7.91667ZM12.5833 7.91667H13.4167C13.8771 7.91667 14.25 8.28958 14.25 8.75V11.6667C14.25 12.1271 13.8771 12.5 13.4167 12.5H12.5833V7.91667Z"
+                  fill="#E5EAFA"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_50744_2305">
+                  <rect
+                    width="20"
+                    height="20"
+                    fill="white"
+                    transform="translate(0.5)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            Slots
+          </a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              class="mx-auto"
+            >
+              <path
+                d="M5.0835 1.875C3.70266 1.875 2.5835 2.99417 2.5835 4.375V13.5417C2.5835 14.9225 3.70266 16.0417 5.0835 16.0417H10.5002C11.881 16.0417 13.0002 14.9225 13.0002 13.5417V4.375C13.0002 2.99417 11.881 1.875 10.5002 1.875H5.0835ZM13.7391 3.60189C13.7983 3.85022 13.8335 4.10833 13.8335 4.375V13.5417C13.8335 15.3796 12.3381 16.875 10.5002 16.875H8.46729L12.9456 18.0436C13.1573 18.099 13.3692 18.125 13.578 18.125C14.6859 18.125 15.6975 17.3826 15.9933 16.2614L18.333 7.38688C18.6859 6.04855 17.8843 4.67816 16.5443 4.33024L13.7391 3.60189ZM7.78451 5.20833C8.05133 5.20833 8.31836 5.30511 8.52669 5.49886C9.45086 6.35761 10.9095 7.88942 10.9095 8.99984C10.9095 9.89734 10.1688 10.625 9.25505 10.625C8.9713 10.625 8.70913 10.5478 8.47705 10.4232L9.22005 11.722C9.3288 11.9953 9.12727 12.2917 8.83268 12.2917H6.74447C6.45155 12.2917 6.24924 11.9982 6.35466 11.7253L7.10335 10.4167C6.86835 10.545 6.60272 10.625 6.31397 10.625C5.40021 10.625 4.65951 9.89734 4.65951 8.99984C4.65951 7.88942 6.11815 6.35761 7.04232 5.49886C7.25086 5.30511 7.51768 5.20833 7.78451 5.20833Z"
+                fill="#E5EAFA"
+              />
+            </svg>
+            Live Casino
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Modal 1 -->
+    <div
+      id="modal-1"
+      class="modal fixed inset-0 z-50 flex items-center justify-center hidden"
+    >
+      <div
+        class="modal-overlay absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
+      ></div>
+      <div
+        class="modal-content relative bg-gray-900 rounded-xl shadow-lg max-w-[400px] min-h-[100px] w-full mx-4 px-2 pt-8 pb-6 scale-95 opacity-0 transition-all duration-300"
+      >
+        <button
+          class="close-modal absolute top-0 right-2 text-gray-500 hover:text-gray-800 text-3xl cursor-pointer"
+        >
+          &times;
+        </button>
+        <form class="relative max-w-full w-[250px] sm:w-[300px] mx-auto">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full py-4 pl-6 pr-12 rounded-full bg-[#e6f0ff] text-gray-700 placeholder-gray-400 shadow-[inset_2px_2px_6px_#cfd9e6,inset_-2px_-2px_6px_#ffffff] outline-none focus:ring-2 focus:ring-blue-200 transition"
+          />
+          <div
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-900"
+          >
+            <!-- Search Icon -->
+            <button class="p-2 cursor-pointer h-[56px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18a7.5 7.5 0 006.15-3.35z"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scroll Top Button -->
+    <button
+      id="scrollTopBtn"
+      type="button"
+      class="w-11 h-11 bg-surface-input rounded-[100px] flex flex-col justify-center items-center gap-1 fixed bottom-16 lg:bottom-5 right-4 opacity-0 pointer-events-none transition-opacity duration-300 cursor-pointer"
+    >
+      <img src="./images/up.svg" alt="up" />
+      <span
+        class="self-stretch text-center justify-center text-text-body-primary text-xs font-normal font-['Inter'] leading-none"
+      >
+        Top
+      </span>
+    </button>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
