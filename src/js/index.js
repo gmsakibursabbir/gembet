@@ -298,3 +298,35 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+// alert
+window.addEventListener("DOMContentLoaded", () => {
+  const alertBox = document.getElementById("info-alart");
+  const closeBtn = document.getElementById("close-alart");
+
+  // Show alert with animation
+  setTimeout(() => {
+    alertBox.classList.remove("opacity-0", "translate-y-[-100%]");
+    alertBox.classList.add("opacity-100", "translate-y-0");
+  }, 100); // small delay to trigger transition
+
+  // Auto close after 10 seconds
+  const autoClose = setTimeout(() => {
+    closeAlert();
+  }, 10000);
+
+  // Manual close
+  closeBtn.addEventListener("click", () => {
+    clearTimeout(autoClose);
+    closeAlert();
+  });
+
+  function closeAlert() {
+    alertBox.classList.remove("opacity-100", "translate-y-0");
+    alertBox.classList.add("opacity-0", "-translate-y-10");
+
+    // Optional: completely remove from DOM after animation
+    setTimeout(() => {
+      alertBox.classList.add("hidden");
+    }, 500); // match with duration-500
+  }
+});
