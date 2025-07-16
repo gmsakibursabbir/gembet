@@ -226,3 +226,19 @@ body {
 .swiper-pagination-bullet-active {
   @apply bg-[#e2e6f9]; /* pill shape & color */
 }
+.swiper-pagination-bullet-cst {
+  @apply w-7 h-1 rounded-full bg-[#070D18] transition-all duration-300;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active-cst {
+  @apply bg-[#E5EAFA]; /* pill shape & color */
+}
+.swiper-pagination-bullet-csttwo {
+  @apply w-7 h-1 rounded-full bg-[#17274B] transition-all duration-300;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active-csttwo {
+  @apply bg-[#E5EAFA]; /* pill shape & color */
+}

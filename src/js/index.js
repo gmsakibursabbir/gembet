@@ -115,7 +115,7 @@ var trustwsswiper = new Swiper(".trustSwiper", {
     disableOnInteraction: false, // continue autoplay after user swipe
   },
   pagination: {
-    el: ".custom-pagination-trust",
+    el: ".custom-pagination",
     clickable: true,
     bulletClass: "swiper-pagination-bullet",
     bulletActiveClass: "swiper-pagination-bullet-active",
@@ -143,6 +143,12 @@ var hdwsswiper = new Swiper(".hdSwiper", {
     delay: 3000, // time between slides (ms)
     disableOnInteraction: false, // continue autoplay after user swipe
   },
+  pagination: {
+    el: ".custom-pagination-hd",
+    clickable: true,
+    bulletClass: "swiper-pagination-bullet",
+    bulletActiveClass: "swiper-pagination-bullet-active",
+  },
   breakpoints: {
     0: {
       slidesPerView: 3.3,
@@ -168,8 +174,8 @@ var whowsswiper = new Swiper(".whoSwiper", {
   pagination: {
     el: ".custom-pagination-who",
     clickable: true,
-    bulletClass: "swiper-pagination-bullet",
-    bulletActiveClass: "swiper-pagination-bullet-active",
+    bulletClass: "swiper-pagination-bullet-cst",
+    bulletActiveClass: "swiper-pagination-bullet-active-cst",
   },
   breakpoints: {
     0: {
@@ -317,7 +323,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Auto close after 10s
   const autoClose = setTimeout(() => {
     closeAlert();
-  }, 11000); // 1s delay + 10s = 11s
+  }, 16000); // 1s delay + 10s = 11s
 
   // Close on click
   closeBtn.addEventListener("click", () => {

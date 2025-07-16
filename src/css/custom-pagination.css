@@ -1,0 +1,20 @@
+/* Custom Swiper Pagination Styles */
+.custom-pagination-who .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(229, 234, 250, 0.3);
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination-who .swiper-pagination-bullet-active {
+  background: #22c55e;
+  transform: scale(1.2);
+}
+
+.custom-pagination-who .swiper-pagination-bullet:hover {
+  background: rgba(229, 234, 250, 0.6);
+}
